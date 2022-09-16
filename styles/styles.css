@@ -5,3 +5,12 @@ body {
   padding: 5%;
   color: blanchedalmond;
 }
+a:link {
+  color: yellow;
+}
+a:visited {
+  color: yellow;
+}
+a:hover {
+  color: yellowgreen;
+}
