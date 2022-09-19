@@ -16,4 +16,5 @@ document.body.style.background = rainbow[Math.floor(7 * Math.random())];
 }
 btn.addEventListener("click", change);
 
-alert("Welcome all");  didnt work alert not defined*/
+alert("Welcome all"); //didnt work alert not defined */
+const name = "Marc";
