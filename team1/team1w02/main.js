@@ -21,7 +21,6 @@ const sum = function (number) {
   let answer = 0;
   for (let i = 1; i <= number; i++) {
     answer += i;
-    console.log(answer);
   }
   return answer;
 };
@@ -39,6 +38,21 @@ function addNumbers() {
     )}`;
   }
 }
+//function is called when part3Button2 is clicked
+//has to be a better way...the is repeating lots of code (just like the addNumbers() function above)
+function multiplyNumbers() {
+  const firstNumber = parseInt(document.getElementById("part3Input1").value);
+  const secondNumber = parseInt(document.getElementById("part3Input2").value);
+  const total = document.getElementById("part3Result");
+
+  if (firstNumber !== NaN && secondNumber !== NaN) {
+    total.innerHTML = `Your multiplication result is ${multiply(
+      firstNumber,
+      secondNumber
+    )}`;
+  }
+}
 //function to sum the two integers inputed
-//Stretch challenge - create arrow function
+//Stretch challenge - create arrow functions
 const sumTwoNumbers = (first, second) => first + second;
+const multiply = (first, second) => first * second;
