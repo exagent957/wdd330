@@ -4,6 +4,10 @@ const weeklyLinks = [
     label: "Week 1 notes",
     url: "w01/w01.html",
   },
+  {
+    label: "Week 2 notes",
+    url: "w02/w02.html",
+  },
 ];
 //function call
 listWeeklyItems(weeklyLinks, "weeklyList");

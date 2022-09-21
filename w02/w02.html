@@ -1,0 +1,1857 @@
+<!DOCTYPE html>
+<ht lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week 2 Notes</title>
+    <link rel="stylesheet" href="../styles/week.css">
+  </head>
+
+</ht<body lang="EN-US" style="tab-interval:.5in;word-wrap:break-word">
+
+<div class="WordSection1">
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">Week2 Reading
+Assignment - Novice to Ninja book chapters 2 through 4.<o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">Ch2: Programming
+basics: <o:p></o:p></span></b></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">A good review since I
+have not used JS for a while. Line comments begin with //. Block comments
+/*……*/. JS statements end with either a new line or a semicolon. There was much
+discussion about how semicolons are often not required but it stands as a good
+practice to use them. JS uses Automatic Semicolon Insertion (ASI). JS is known
+as a C-style syntax because of its similarities with C programming language. A
+block is a series of statements contained inside curly braces. Block do not
+need to be terminated by a semicolon. Use as much whitespace needed to make
+code understandable/readable. Avoid the reserved words found on page 34. <o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">Primitive Data Types</span></b><span style="font-family:Consolas">: (Primitives stored by a value)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">String<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Symbol<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Number<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Boolean<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Undefined<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Null<o:p></o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">Non-primitive Data
+Type</span></b><span style="font-family:Consolas"> is an object: (Stored by
+reference)<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Arrays<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Functions<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Object literals<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Data types do not have to
+be declared in JS at time of declaration<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><b><span style="font-family:Consolas">typeof</span></b></span><b><span style="font-family:Consolas"> operator</span></b><span style="font-family:Consolas">
+can report type of a value<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; <span class="SpellE">typeof</span>
+'hello'<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">'string'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="SpellE"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">typeof</span></span><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman"> <span class="GramE">{ ninja</span>: 'turtle' }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">&lt;&lt;
+'object'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="SpellE"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">typeof</span></span><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman"> [ 1, 2,
+<span class="GramE">3 ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">&lt;&lt;
+'object' (Interesting that both were reported as just object – not as array
+etc.)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">Variables</span></b><span style="font-family:Consolas">: value stored in memory<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Must be declared. Can be
+declared on same line separated by commas.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">let x = 3, y = 4, z = 5;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">Const</span></b><span style="font-family:Consolas"> – constant, will not be reassigned if used as a
+primitive data type<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Const variable can be
+reassigned if associated with a non-primitive data type like an array<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Example:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; const name = {value:
+<span class="SpellE">'Marc</span>'}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; <span class="SpellE">name.value</span>
+= 'Jacki';<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">'Jacki'<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; name<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="GramE"><span style="font-family:Consolas">{ value</span></span><span style="font-family:Consolas">: 'Jacki' }<span style="mso-spacerun:yes">&nbsp;
+</span>Though name was a const it was changed because of being associated with
+a non-primitive data type. Although const will prevent reassignment to another
+object.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Use const to assign most
+variables, makes programs more predictable and helps avoids bugs.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">Let</span></b><span style="font-family:Consolas"> – can be reassigned later in program<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span>let score = 0;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Can update a mutable variable
+using equal sign=&gt; score = 5;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">SCOPE: Const and let have
+block scope so their value only exists inside the block in which they were
+declared.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">Var</span></b><span style="font-family:Consolas"> – prior to ES6. Works similar to let. Used
+frequently in older code. Sounds like var has global scope.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">Scope</span></b><span style="font-family:Consolas">: determines where a variable is accessible in a
+program<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Global scope: A variable
+declared outside of a block has global scope, accessible everywhere in the
+program. Be cautious with this practice. Keep global to a minimum.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Local scope: Blocks can
+be used to create local scope. Declared with let or const inside a block make
+them available only inside that block.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Example: scope outside a
+block and inside a block<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; const a = '1';<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; a<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">'1'<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; {const a = 3; a;}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">3<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; a<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">'1'<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>value of ‘a’ was 3 inside the block. 1
+outside block. Same name two values – caution<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Example: global scope
+outside block overwritten inside block changes global variable too<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; let b = 2;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; b<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">2<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; {b=4; b<span class="GramE">;}<span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span>//did not use let<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">4<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; b<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">4<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Example: Global variable
+created inside block without using const or let. Accessible outside the block.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; {c=5; c;}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">5<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; c<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">5<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Example: local variable
+created with const inside block. Not accessible outside block<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; {const d = 6; d;}<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">6<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; d<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Uncaught <span class="SpellE">ReferenceError</span>: d is not defined<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Example: const value
+unchanged while let value changed<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; const a = 1;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; a<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">1<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; let b = a;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; b<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">1<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; b = 2;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">2<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; a<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">1<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; a = 5;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Uncaught <span class="SpellE">TypeError</span>: Assignment to constant variable.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Example: changing the
+value property of d changes it for c as well because c and d reference the same
+object.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; const c = {value:
+1};<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; c<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="GramE"><span style="font-family:Consolas">{ value</span></span><span style="font-family:Consolas">: 1 }<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; let d = c;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; d<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="GramE"><span style="font-family:Consolas">{ value</span></span><span style="font-family:Consolas">: 1 }<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; <span class="SpellE">d.value</span>
+= 2;<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">2<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; d<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="GramE"><span style="font-family:Consolas">{ value</span></span><span style="font-family:Consolas">: 2 }<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; c<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="GramE"><span style="font-family:Consolas">{ value</span></span><span style="font-family:Consolas">: 2 }<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Variable names can start
+with $ or _ but this should be avoided when possible because _ can refer to
+private properties and $ is used by jQuery library.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">Strings:</span></b><span style="font-family:Consolas"> Best to use literals<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">‘hello<span class="GramE">’<span style="mso-spacerun:yes">&nbsp; </span>/</span>/literal<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">new String(“hello”)
+//object<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Be aware some characters
+must be escaped to work properly. Backslash \ is the method for escaping
+characters.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">Properties</span></b><span style="font-family:Consolas"> are information about an object or value.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">Methods</span></b><span style="font-family:Consolas"> perform an action on the object or value.<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Some string properties:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Example:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; const name = <span class="SpellE">'Marc</span>';<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; name<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="SpellE"><span style="font-family:Consolas">'Marc</span></span><span style="font-family:Consolas">'<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">name.length</span></span><span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>//dot notation is most common<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">4<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; name['length']
+//alternative way of getting to length property<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">4<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal"><b><span style="font-family:Consolas">String methods</span></b><span style="font-family:Consolas">:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">name.toUpperCase</span></span>()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">'MARC'<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">name.toLowerCase</span></span>()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">'marc'<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">name.charAt</span></span>(3); //0, 1, 2, 3<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">'c'<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">name.indexOf</span></span>('r');<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">2<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">name.indexOf</span></span>('x'); //returns -1 if does not exist<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">-1<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">Others:<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="GramE"><span style="font-family:Consolas">.<span class="SpellE">lastIndexOf</span></span></span><span style="font-family:Consolas">()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="GramE"><span style="font-family:Consolas">.includes</span></span><span style="font-family:Consolas">()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="GramE"><span style="font-family:Consolas">.<span class="SpellE">startsWith</span></span></span><span style="font-family:Consolas">()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="GramE"><span style="font-family:Consolas">.<span class="SpellE">endsWith</span></span></span><span style="font-family:Consolas">()<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span class="GramE"><span style="font-family:Consolas">.<span class="SpellE">concat</span></span></span><span style="font-family:Consolas">() method
+used to concatenate two or more strings together<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">&gt; 'JavaScript<span class="GramE">' .<span class="SpellE">concat</span></span>(' Ninja')<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas">'JavaScript Ninja'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="SpellE"><span style="font-family:Consolas">Concat</span></span><span style="font-family:Consolas"> shortcut is to use + operator<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE">'Marc</span>' + ' ' +
+'Williamson'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="SpellE"><span style="font-family:Consolas">'Marc</span></span><span style="font-family:Consolas"> Williamson'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">.trim</span></span><span style="font-family:Consolas">() method removes any whitespace from beginning
+and end of a string. It also removes escaped tabs and returns.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; '<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Clean it up<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp; </span><span class="GramE">'.trim</span>();<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'Clean it up'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">.repeat</span></span><span style="font-family:Consolas">() method will repeat a string x times<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; 'Sheep are cool <span class="GramE">'.repeat</span>(4);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'Sheep are cool Sheep are cool Sheep are cool
+Sheep are cool '<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">TEMPLATE LITERALS</span></b><span style="font-family:Consolas"> – love this…. USE THIS <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Uses the backtick character ` and variable set off
+with ${}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const name = <span class="SpellE">'Marc</span>';<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; `Hello ${name<span class="GramE">}!`</span>;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'Hello Marc!'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Symbols</span></b><span style="font-family:Consolas">:
+do not have a literal form must be created with <span class="GramE">Symbol(</span>)
+function. The uniqueness of symbols <span class="GramE">make</span> it impossible
+for the names of any properties to clash with each other if they are symbols.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">This came from page 54 and I am not really
+following it yet. Need to dive deeper into this.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const <span class="SpellE">uniqueID</span> = <span class="GramE">Symbol(</span>'this is a unique ID');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE">typeof</span> <span class="SpellE">uniqueID</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'symbol'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; console.log(<span class="SpellE">uniqueID</span>)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Symbol(</span></span><span style="font-family:Consolas">this is a unique ID)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; String(<span class="SpellE">uniqueID</span>)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'<span class="GramE">Symbol(</span>this is a unique
+ID)'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Possible for two variables to point to the same
+symbol if the for <span class="GramE"><b>for(</b></span><b>) method</b> is used
+when creating the symbol:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const A = <span class="SpellE"><span class="GramE">Symbol.for</span></span><span class="GramE">(</span>'shared symbol');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const B = <span class="SpellE"><span class="GramE">Symbol.for</span></span><span class="GramE">(</span>'shared symbol');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; A<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Symbol(</span></span><span style="font-family:Consolas">shared symbol)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; B<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Symbol(</span></span><span style="font-family:Consolas">shared symbol)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Numbers</span></b><span style="font-family:Consolas">:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Can be integers<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Floating point numbers (decimals or floats)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="SpellE"><span style="font-family:Consolas">typeOf</span></span><span style="font-family:Consolas"> returns ‘number’ for both types<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">So</span></span><span style="font-family:Consolas"> you can test if it is an int with <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE">Number.isInteger</span>(9)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">True<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Octal and Hexadecimal numbers:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="SpellE"><span style="font-family:Consolas">OxAF</span></span><span style="font-family:Consolas"> hex base 16<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Oo47 octal base 8<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Ob1010 binary literal<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Refer to page 57 – I do not really understand this
+yet.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Exponential notation:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">1e6 10 to the power of 6 <span class="GramE">( a</span>
+million)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">2E3<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>2
+multiplied by 10^3<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">2.5e-3<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>2.5
+multiplied by 10 to the power -3<span class="GramE"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>(</span>0.0025)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Number Methods</span></b><span style="font-family:
+Consolas">:<span style="mso-spacerun:yes">&nbsp; </span>various methods are
+explained on pages 57-59<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Arithmetic Operations: 59-60<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Changing the value of Variables<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Let point = 0;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Points = points + 10;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Points is now 10 … points +=10; now is 20<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Points -=<span class="GramE">5;<span style="mso-spacerun:yes">&nbsp; </span>now</span> is 15<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Points *=<span class="GramE">2;<span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span>now is 30<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Points /=<span class="GramE">3;<span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span>now is 10<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Points %=<span class="GramE">7;<span style="mso-spacerun:yes">&nbsp; </span>now</span> is 3 (the remainder after dividing
+10/7)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Points ++<span class="GramE">;<span style="mso-spacerun:yes">&nbsp; </span>returns</span> <span class="SpellE">orig</span>
+value then increments by one<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">++<span class="GramE">points;<span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span>increments <span class="SpellE">orig</span>
+value by one and returns that value<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Points --;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">--points;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Infinity</span></b><span style="font-family:Consolas">
+is a JS error value if number is too big for JS to deal with. See page 62. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="SpellE"><b><span style="font-family:Consolas">NaN</span></b></span><span style="font-family:Consolas"> is a JS error for Not a Number<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="SpellE"><span style="font-family:Consolas">Number.isFinite</span></span><span style="font-family:Consolas">() method returns true if the value is a number
+this is not Infinity, -Infinity, or <span class="SpellE">NaN</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Type Coercion</span></b><span style="font-family:
+Consolas"> (pg64): JS will attempt to convert one operand to an equivalent
+value of the other operand’s type. Does not always work like you may think….<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Example:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">‘2’ * 8;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&lt;16<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Then you have this:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">‘2’ + 8;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&lt;’28’<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Converting between strings and numbers (pg65 - 66)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Number(</span></span><span style="font-family:Consolas">) method is preferred<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Number(</span></span><span style="font-family:Consolas">‘23’)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&lt;23<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Numbers to strings use the <span class="GramE">String(</span>)
+function (pg66 -67)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">String(</span></span><span style="font-family:Consolas">3);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&lt;’3’<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Parsing Numbers</span></b><span style="font-family:
+Consolas">: (pg67 – 69)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Convert a string representation of a numerical
+value back into a number. Can specify the base of the number being converted.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Undefined</span></b><span style="font-family:Consolas">:
+<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Value given to variables that have not been
+assigned a value.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Null</span></b><span style="font-family:Consolas">:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">No value. A placeholder that says there should be
+a value but there isn’t at the moment. Null behaves (coerced) like a zero.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Boolean</span></b><span style="font-family:Consolas">:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">True or <span class="GramE">false<span style="mso-spacerun:yes">&nbsp; </span>-</span> see <span class="SpellE">pg</span> 70
+for a list of the <span class="SpellE">falsy</span> <span class="SpellE">booles</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Logical Operators</span></b><span style="font-family:Consolas">:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">! the logical not<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">!!<span style="mso-spacerun:yes">&nbsp; </span>to check
+for truthy or <span class="SpellE">falsy</span><span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>see page 71-72<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&amp;&amp; logical and (pg72)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Both conditions must be met(true)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">|| logical or<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">One of the conditions must be true<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Bitwise Operators (pg74-77)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Bitwise NOT<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Bitwise AND<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Bitwise OR<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Bitwise XOR<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Bitwise Shift Operators – never seen this one
+before (<span class="SpellE">pg</span> 77)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Comparison</span></b><span style="font-family:
+Consolas">:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Equality = assignment<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Soft Equality =<span class="GramE">=<span style="mso-spacerun:yes">&nbsp; </span>JS</span> doesn’t take into account data type
+which can lead to strange returns<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Hard Equality ==<span class="GramE">=<span style="mso-spacerun:yes">&nbsp; </span>must</span> be of same data type<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Inequality !</span></span><span style="font-family:Consolas">= data type doesn’t matter<span style="mso-spacerun:yes">&nbsp; </span>!== data type matters<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&lt;<o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&lt;=<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt;<o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt;=<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Chapter 3<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Arrays, Logic, Loops<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Array</span></b><span style="font-family:Consolas">
+is an ordered list of values. Use square brackets []<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Const <span class="SpellE">myArray</span> = []; OR
+const <span class="SpellE">myArray</span> = new <span class="GramE">Array(</span>);
+// array constructor function<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Both create an empty array object.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Create array literal example:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const tools <span class="GramE">=[</span>'saw',
+'hammer', 'drill', 'rake'];<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'saw', 'hammer', 'drill', 'rake<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">tools[</span>0]<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'saw'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">tools[</span>4] ='shovel'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'shovel'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'saw', 'hammer', 'drill', 'rake', 'shovel<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Arrays can hold mixed data types<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Can delete value from array but index space
+remains and becomes undefined<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; delete <span class="GramE">tools[</span>2];<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">true<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'saw', 'hammer', &lt;1 empty item&gt;, 'rake',
+'shovel<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">tools[</span>2];<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Destructuring an array</span></b><span style="font-family:Consolas"> is the concept of taking values out of an array
+and presenting them as individual values. This is new to me. Multiple values
+can be assigned at the same time.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">See page 93 – these code examples did not work.
+Uncaught <span class="SpellE">TypeError</span>: Assignment to constant variable.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.length</span></span>;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">5<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">To find last item in array must subtract 1 due to
+index 0<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools[<span class="GramE">tools.length</span>-1];<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'shovel' <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">To increase length of array<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.length</span></span>=8;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">8<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'saw', 'hammer', &lt;1 empty item&gt;, 'rake',
+'shovel', &lt;3 empty items<span class="GramE">&gt; ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">To decrease length of array (values will be cut
+off and lost)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="SpellE"><span class="GramE"><span style="font-family:Consolas">tools.length</span></span></span><span style="font-family:Consolas">=4;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">4<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'saw', 'hammer', &lt;1 empty item&gt;, 'rake<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">To remove last item <span class="GramE">use .pop</span>()
+method<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'saw', 'hammer', 'drill', 'rake<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.pop</span></span><span class="GramE">(</span>);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'rake'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'saw', 'hammer', 'drill<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">To remove first item <span class="GramE">use .shift</span>()
+method<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.shift</span></span>();<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'saw'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'hammer', 'drill<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">To append item to end of array <span class="GramE">use
+.push</span>(‘item to push’) method<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.push</span></span>('shovel')<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">3<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'hammer', 'drill', 'shovel<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">To append item to beginning of array <span class="GramE">use .unshift</span>(‘item to add’) method<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.unshift</span></span>('chisel');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">4<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'chisel', 'hammer', 'drill', 'shovel<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">The .<span class="SpellE">concat</span></span></span><span style="font-family:Consolas">() method can merge an array with one or more
+arrays.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">See page98 – Code example failed <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.concat</span></span>(['<span class="SpellE">knife','wrench','pliers</span>'])<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'chisel',
+'hammer',<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'drill<span class="GramE">',<span style="mso-spacerun:yes">&nbsp; </span>'</span>shovel',<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'knife<span class="GramE">',<span style="mso-spacerun:yes">&nbsp; </span>'</span>wrench',<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'pliers'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">]<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'chisel', 'hammer', 'drill', 'shovel<span class="GramE">' ]</span> //note how it did not change the tools array<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools=<span class="SpellE"><span class="GramE">tools.concat</span></span>(['knife',
+'wrench', 'plier']);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Uncaught <span class="SpellE">TypeError</span>:
+Assignment to constant variable. //Failed when reassignment attempted<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">See page 97 – the spread operator did not work for
+me …tools… <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">The .join</span></span><span style="font-family:Consolas">() method converts the array into a string of comma
+separated items<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.join</span></span>();<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'<span class="SpellE"><span class="GramE">chisel,hammer</span>,drill,shovel</span>'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">A non-destructive method for slicing out a piece
+of an array is <span class="GramE">the .slice</span>(2,4) method<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.slice</span></span>(0,2);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'chisel', 'hammer<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'chisel', 'hammer', 'drill', 'shovel<span class="GramE">' ]</span> //note how <span class="SpellE">orig</span> array was not
+altered<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Use .splice</span></span><span style="font-family:Consolas">(#start splice, #items to remove, ‘insert new
+value’. Returns a sub array of items removed see pg99.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="SpellE"><span class="GramE"><span style="font-family:Consolas">tools.splice</span></span></span><span style="font-family:Consolas">(1,1,'screw driver');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'hammer<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'chisel', 'screw driver', 'drill', 'shovel<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Can also <span class="GramE">use .splice</span>()
+without removing an items A DESTRUCTIVE METHOD – CAUTION - POWERFUL<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.splice</span></span>(3,0,'mallet');
+//note the zero indicates #items to be removed<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[]<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'chisel', 'screw driver', 'drill', 'mallet',
+'shovel<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">To completely remove an item and its index
+position <span class="GramE">use .splice</span>(#index start, #items to be
+removed) leave values to add empty:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.splice</span></span>(2,1);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'drill<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'chisel', 'screw driver', 'mallet', 'shovel<span class="GramE">' ]</span> //the item removed ‘drill’ is returned<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">To reverse the array order <span class="GramE">use
+.reverse</span>() method<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; tools<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'chisel', 'screw driver', 'mallet', 'shovel<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.reverse</span></span>();<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'shovel', 'mallet', 'screw driver', 'chisel<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">To alphabetically sort <span class="GramE">use .sort</span>()
+method<span style="mso-spacerun:yes">&nbsp; </span>(Caution with numbers they get
+sorted by first digit first and can mess order up. Way to fix this is in chapter
+4.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">tools.sort</span></span>()<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 'chisel', 'mallet', 'screw driver', 'shovel<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Use .<span class="SpellE">indexOf</span></span></span><span style="font-family:Consolas">(‘item’) to get index of first occurrence. Will
+return -1 if does not exist<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Use .includes</span></span><span style="font-family:Consolas">(‘item’) for Boolean check of item. Can add this<span class="GramE">… .includes</span>(‘item’,1) to start search at index 1.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Multidimensional Arrays</span></b><span style="font-family:Consolas"> – an array of arrays. To create a coordinate
+system<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; coordinates<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ [ 1, <span class="GramE">3 ]</span>, [ 4, 2 ] ]<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; coordinates [0][0]; //first value of first
+array<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">1<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; coordinates [1][0]; //first value of second
+array<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">4<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; coordinates [0][1]; // second value of first
+array<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">3<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; coordinates [1][1]; // second value of second
+array<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">2<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">SETS<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Unique data structure with no duplicates. Good way
+to keep track of data without having to check for duplicates.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Create empty set<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const list = new <span class="GramE">Set(</span>);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; list<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Set(</span></span><span style="font-family:Consolas">0) {}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">list.add</span></span><span class="GramE">(</span>1);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Set(</span></span><span style="font-family:Consolas">1) { 1 }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE">list.add</span>(2<span class="GramE">).add</span>(3).add(4);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Set(</span></span><span style="font-family:Consolas">4) { 1, 2, 3, 4 }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const numbers = new <span class="GramE">Set(</span>[1,2,3]);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; numbers<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Set(</span></span><span style="font-family:Consolas">3) { 1, 2, 3 }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Using <span class="GramE">Set(</span>) with strings
+is a bit different<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const letters = new Set('<span class="SpellE">helllllo</span>')<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; letters<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Set(</span></span><span style="font-family:Consolas">4) { 'h', 'e', 'l', 'o' }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Must use <span class="GramE">Set(</span>).add for separate
+words<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const words = new Set(<span class="GramE">).add</span>('the').add('big').add('bad').add('wolf');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; words<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Set(</span></span><span style="font-family:Consolas">4) { 'the', 'big', 'bad', 'wolf' }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Non-primitive values such as arrays, and objects
+are considered unique values even if they contain the same values. Appears to
+allow duplicate values in the set but they are not ===<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const arrays = new Set(<span class="GramE">).add</span>([1]).add([1]);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; arrays<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Set(</span></span><span style="font-family:Consolas">2) { [ 1 ], [ 1 ] }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; [<span class="GramE">1]=</span>==[1];<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">false<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Type coercion not used with set. This appears to
+be a duplicate but is not.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const <span class="SpellE">mixedTypes</span> =
+new Set(<span class="GramE">).add</span>(2).add('2');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE">mixedTypes</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Set(</span></span><span style="font-family:Consolas">2) { 2, '2' }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Set methods</span></b><span style="font-family:
+Consolas">:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">.size</span></span><span style="font-family:Consolas">() returns number of items in set<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">.has</span></span><span style="font-family:Consolas">(‘item you are looking for’) returns true or false.
+This <span class="GramE">has(</span>) methods works much faster than includes()
+or <span class="SpellE">indexOf</span>() methods for arrays.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Sets do not have index notation so you cannot find
+value of first item with <span class="SpellE"><span class="GramE">mySet</span></span><span class="GramE">[</span>0].<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">.delete</span></span><span style="font-family:Consolas">(‘item to delete’)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">.clear</span></span><span style="font-family:Consolas">()<span style="mso-spacerun:yes">&nbsp; </span>removes
+all values from a set.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">A set can be converted to an array using the
+spread operator inside an array literal. <span class="SpellE">Array.from</span>()
+can also be used to convert set into array.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Another way is to use the spread operator and new <span class="GramE">Set(</span>) in an array to create a new array with no duplicates (pg108)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Weak sets</span></b><span style="font-family:Consolas">:
+weak sets avoid memory leaks by garbage collecting any reference to a “dead
+object” that’s had its original reference removed. Only non-primitive data
+types can be used in a weak set (objects, arrays, functions)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const weak = new <span class="SpellE"><span class="GramE">WeakSet</span></span><span class="GramE">(</span>);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const <span class="SpellE">myArray</span> =
+[1,2,3];<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE">weak.add</span>(<span class="SpellE">myArray</span>);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="SpellE"><span style="font-family:Consolas">WeakSet</span></span><span style="font-family:Consolas"> <span class="GramE">{ &lt;</span>items unknown&gt;
+} //appears as if set is empty but it is not.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE">weak.has</span>(<span class="SpellE">myArray</span>);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">True<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">The array can be removed from the set <span class="GramE">with .delete</span>()<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">weak.delete</span></span>(<span class="SpellE">myArray</span>);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">true<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE">weak.has</span>(<span class="SpellE">myArray</span>);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">False<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Maps</span></b><span style="font-family:Consolas">
+(pg111)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Data structure that <span class="GramE">keep</span>
+a list of key and value pairs, similar to “hashes”, “hash tables” or “dictionaries”
+in other programming languages.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Maps can use any data type as a key. Maps have a
+size property. Maps are solely <span class="SpellE">focues</span> on the storage
+and retrieval of key-value pairs.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Must use <span class="GramE">get(</span>) method to
+retrieve map values. <span class="GramE">Use .set</span>() method to add items<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const <span class="SpellE">romanNumerals</span>
+= new <span class="GramE">Map(</span>);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE">romanNumerals.set</span>(1,'I');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Map(</span></span><span style="font-family:Consolas">1) { 1 =&gt; 'I' }<span style="mso-spacerun:yes">&nbsp;
+</span>// =&gt; is referred to as the “hash rocket” symbol <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE">romanNumerals.set</span>(2,'II'<span class="GramE">).set</span>(3,'III').set(4,'IV').set(5,'V');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Map(</span></span><span style="font-family:Consolas">5) { 1 =&gt; 'I', 2 =&gt; 'II', 3 =&gt; 'III', 4
+=&gt; 'IV', 5 =&gt; 'V' }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">romanNumerals.get</span></span><span class="GramE">(</span>4); //example using get() method<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'IV'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Map can be created with nested arrays<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const heroes = new <span class="GramE">Map(</span>[['Clark
+<span class="SpellE">Kent','Superman</span>'],['Bruce <span class="SpellE">Wayne','Batman</span>']]);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; heroes<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">Map(</span></span><span style="font-family:Consolas">2) { 'Clark Kent' =&gt; 'Superman', 'Bruce Wayne'
+=&gt; 'Batman' }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">heroes.size</span></span>;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">2<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">heroes.delete</span></span>('Clark
+Kent'); //example using .delete()<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">true<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">heroes.size</span></span>;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">1<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">heroes.clear</span></span>();<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">heroes.size</span></span>;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">0<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Maps (pg114) can be converted into a nested array
+of key-value pairs using either the spread operator or the <span class="SpellE">Array.from</span>()
+method.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Weak maps</span></b><span style="font-family:Consolas">:
+work the same way as Weak sets…. new <span class="SpellE"><span class="GramE">WeakMap</span></span><span class="GramE">(</span>), has(), get(), set() and delete()<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Logic</span></b><span style="font-family:Consolas">
+(pg115)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">if</span></b><span style="font-family:Consolas">
+(condition or conditions to check for) {<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">whatever action goes here;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Else<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">if
+(condition) {<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">// code
+to run if condition is true<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">} else {<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">// code
+to run if condition is false<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">Ternary
+Operator</span></b><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">:
+shorthand for if…<span class="GramE">else<span style="mso-spacerun:yes">&nbsp;
+</span>uses</span> ternary operator “?” (no if or else key words used) first
+part for true : second part for false<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">&gt;
+const n = 5;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">&gt; n%2
+=== <span class="GramE">0 ?</span> console.log('n is an even
+number'):console.log('n is an odd number');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">n is an
+odd number<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">An even
+shorter way would be something like this:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">&gt; <span class="GramE">console.log(</span>`n is a ${(n%2 === 0)?'<span class="SpellE">even':'odd</span>'}
+number`);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman">n is <span class="SpellE"><span class="GramE">a</span></span> odd number<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas;mso-bidi-font-family:Monospace821BT-Roman"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Else if<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Can string a bunch of if statements together with
+else if<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Switch statement</span></b><span style="font-family:
+Consolas">: can be easier to read than a bunch of else ifs<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const number = 4;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; switch(number) {<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... case 4:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... <span class="GramE">console.log(</span>'Number
+is four');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... break;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... case 5:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... <span class="GramE">console.log(</span>'Number
+is five');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... break;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... case 6:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... <span class="GramE">console.log(</span>'Number
+is six');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... break;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... default:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... <span class="GramE">console.log(</span>'Number
+is less than four');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... break;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Loops<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">While</span></b><span style="font-family:Consolas">
+(condition) {<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">//do something<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Be cautious of infinite loops<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Do <span class="GramE">while<span style="font-weight:
+normal"><span style="mso-spacerun:yes">&nbsp; </span>-</span></span></span></b><span style="font-family:Consolas"> executes at least once. Condition comes after the
+block of code.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">do {<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">//do something<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">} while(condition)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">For loops</span></b><span style="font-family:Consolas">
+are most commonly used in JS<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">For (initialization; condition; after) {do
+something}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">For loops can be nested.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Use for loops to loop through an array pg124<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">ES6 introduced <b>for-of loop</b><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><span style="font-family:Consolas">for(</span></span><span style="font-family:Consolas">const value of avengers){<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">console.log(value);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">}<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Pg125<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Looping over sets</span></b><span style="font-family:Consolas">:<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;
+</span>remember sets do not allow duplicates<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Const letters = new Set(‘hello’);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">for(</span>const letter of
+letters) {<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... console.log(letter);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">h<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">e<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">l<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">o<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Looping over Maps</span></b><span style="font-family:Consolas"> pg126<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">for(</span>const key of <span class="SpellE">romanNumerals.keys</span>()){<span style="mso-spacerun:yes">&nbsp;&nbsp;
+</span>//keys() method<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... console.log(key);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">1<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">2<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">3<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">4<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">5<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">for(</span>const value of <span class="SpellE">romanNumerals.values</span>()){<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;
+</span>//values() method<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... console.log(value);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">I<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">II<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">III<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">IV<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">V<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">for(</span>const [<span class="SpellE">key,value</span>] of <span class="SpellE">romanNumerals.entries</span>()){<span style="mso-spacerun:yes">&nbsp; </span>//entries() method<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... console.log(`${key} in Roman Numerals is
+${value}`);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">1 in Roman Numerals is I<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">2 in Roman Numerals is II<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">3 in Roman Numerals is III<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">4 in Roman Numerals is IV<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">5 in Roman Numerals is V<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Weak maps</span></b><span style="font-family:Consolas">
+<b>are non-enumerable</b> so it is not possible to loop over them using any of
+these methods.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Chapter 4 Functions (pg132)<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Functions</span></b><span style="font-family:Consolas">
+are first-class objects meaning they can be assigned to variables, stored in
+arrays and can even be returned by other functions.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Function declaration</span></b><span style="font-family:Consolas">:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; function <span class="GramE">hello(</span>){<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... <span class="GramE">console.log(</span>'Hello
+Andrew');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">hello(</span>)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Hello Andrew<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Using <b>function constructor</b> – not recommended
+to declare functions in the manner <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const hi = new <span class="GramE">Function(</span>'console.log("Hello
+World");');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">hi(</span>)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Hello World<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">All functions return a value that uses keyword
+return.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; function <span class="GramE">howdy(</span>){<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... return 'Howdy <span class="SpellE">Yall</span>';<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">howdy(</span>)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'Howdy <span class="SpellE">Yall</span>'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Function return can be assigned to variable:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const message = <span class="GramE">howdy(</span>);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; message<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">'Howdy <span class="SpellE">Yall</span>'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Parameters and Arguments</span></b><span style="font-family:Consolas"> (pg138)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Function parameters are set when function is
+defined. Can use as many as you like.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Function arguments are set when function is
+invoked. Number of arguments should match number of parameters. If too few
+arguments are used things will likely break. If too many arguments are provided
+the extras are simply ignored.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; function square(x<span class="GramE">){<span style="mso-spacerun:yes">&nbsp; </span></span>//x is the parameter<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... return x*x;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">square(</span>4.5);<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>//4.5 is the argument<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">20.25<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">The “<b>arguments variable</b>”: every function
+has a special variable called arguments. It is an array-like object, has only
+length property, that contains every argument passed to the function. We can
+create an <span class="GramE">arguments</span> function:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; function <span class="GramE">arguments(</span>){<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... return arguments;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">arguments(</span>'hello', <span class="SpellE">NaN</span>, 1, 2, 3, 4, 5);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[Arguments] {<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'0':
+'hello',<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'1': <span class="SpellE">NaN</span>,<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'2': 1,<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'3': 2,<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'4': 3,<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'5': 4,<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'6': 5<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Rest operator</span></b><span style="font-family:
+Consolas">: (pg141) creates array of arguments inside of the body of the
+function.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; function <span class="GramE">rest(</span>...<span class="SpellE">args</span>){<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... <span class="GramE">for(</span><span class="SpellE">arg</span> of <span class="SpellE">args</span>){<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... console.log(<span class="SpellE">arg</span>);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<span style="mso-spacerun:yes">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span style="mso-spacerun:yes">&nbsp;&nbsp;</span>//new to me and I do not understand what is
+going on here<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">rest(</span>2,4,6,8);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">2<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">4<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">6<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">8<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Improved Mean Function<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>//this is still a bit over my head<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; function <span class="GramE">mean(</span>...values){<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... let total = 0;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... <span class="GramE">for(</span>const value of
+values){<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... total += value;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... return total/<span class="SpellE">values.length</span>;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">mean(</span>2,8,12,11,4,2);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">6.5<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Default Parameters</span></b><span style="font-family:Consolas">:<span style="mso-spacerun:yes">&nbsp; </span>ALWAYS
+PUT DEFAULT PARAMETERS AFTER ALL OTHER PARAMETERS<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; function hello(name='World<span class="GramE">'){</span><span style="mso-spacerun:yes">&nbsp;&nbsp; </span>//this is the default if no argument
+supplied<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... <span class="GramE">console.log(</span>`Hello
+${name}!`);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">hello(</span>)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Hello World!<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; hello('Universe'<span class="GramE">);<span style="mso-spacerun:yes">&nbsp; </span>/</span>/result when argument supplied<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Hello Universe!<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Arrow Functions</span></b><span style="font-family:
+Consolas">: much more succinct way to declare functions. Always anonymous
+functions so them must be assigned to a variable to refer to them.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">=&gt; <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp;</span>Parameters come
+before the arrow<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Main body of function comes after arrow<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const square = x =&gt; x*x;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">square(</span>5);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">25<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const add = (<span class="SpellE"><span class="GramE">x,y</span></span>) =&gt; <span class="SpellE">x+y</span>;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; add (5,6)<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">11<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Note: if function requires no <span class="GramE">parameters</span>
+then empty () must be used<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">const hello = () =&gt; <span class="GramE">alert(</span>‘Hello
+World!’);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Function Hoisting</span></b><span style="font-family:Consolas">:<br>
+Moving all variable and function declarations to the top of the current scope
+regardless of where they are defined. Functions defined by function declaration
+are automatically hoisted and can be invoked before they have been defined.
+Useful as it allows all function declarations to be placed together. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Variable Hoisting</span></b><span style="font-family:Consolas">: pg147<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Variable declarations that use var keyword are
+automatically moved to the top of the current scope. But variable assignment is
+not hoisted. Variable hoisting causes much confusion and relies on using var to
+declare variables. Use const or let at the beginning of a block so hoisting is
+unnecessary.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Callbacks:</span></b><span style="font-family:
+Consolas"> pg149<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Function can be provided as a parameter to another
+function. Function that is passed as an argument to another function is a “callback”.
+An anonymous function can also be used as the callback…looks confusing to me.
+Simple example below<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; function sing(<span class="SpellE"><span class="GramE">song,callback</span></span>) {<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... <span class="GramE">console.log(</span>`I'm
+singing along to ${song}.`);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... <span class="GramE">callback(</span>);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; function <span class="GramE">dance(</span>){<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... <span class="GramE">console.log(</span>'Moving
+my body to the groove.');<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="GramE">sing(</span>'Let It Go',
+dance);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">I'm singing along to Let It Go.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Moving my body to the groove.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Sorting Arrays <span class="GramE">With</span> a
+Callback: pg151<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Using the <span class="GramE">sort(</span>) method
+for numbers in an array does not truly sort them correctly<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">This can be fixed with a callback function<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; function numerically(<span class="SpellE"><span class="GramE">a,b</span></span>){<span style="mso-spacerun:yes">&nbsp;&nbsp; </span>//this
+is the callback function<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... return a-b;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... }<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; [1,3,12,5,23,18,7<span class="GramE">].sort</span>(numerically);
+//callback used as <span class="SpellE">arg</span> in sort() method<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span><span class="GramE">1,<span style="mso-spacerun:yes">&nbsp; </span>3</span>,<span style="mso-spacerun:yes">&nbsp; </span>5, 7,<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>12, 18, 23<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">]<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Array Iterators</span></b><span style="font-family:
+Consolas">:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="SpellE"><span class="GramE"><b><span style="font-family:Consolas">forEach</span></b></span></span><span class="GramE"><b><span style="font-family:Consolas">(</span></b></span><b><span style="font-family:Consolas">) method</span></b><span style="font-family:Consolas">
+will loop through array and invoke a callback function using each value as an
+argument. The callback function takes 3 parameters, value in the array, current
+index, the array that the callback is being called on.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const colors = ['<span class="SpellE">red','green','blue','yellow','purple</span>'];<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">colors.forEach</span></span>(
+(<span class="SpellE">color,index</span>) =&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... <span class="GramE">console.log(</span>`Color at
+position ${index} is ${color}`) );<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Color at position 0 is red<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Color at position 1 is green<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Color at position 2 is blue<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Color at position 3 is yellow<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Color at position 4 is purple<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><b><span style="font-family:Consolas">map(</span></b></span><b><span style="font-family:Consolas">) method</span></b><span style="font-family:Consolas">
+returns a new array that replaces each value with the return value of the
+callback function. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; [1,2,3<span class="GramE">].map</span>(square);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 1, 4, <span class="GramE">9 ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">An anonymous function can also be used as a
+callback.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; [1,2,3<span class="GramE">].map</span>(x=&gt;x*x);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 1, 4, <span class="GramE">9 ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">For this <span class="GramE">example</span> colors
+was previously set up as an array<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE"><span class="GramE">colors.map</span></span><span class="GramE">( (</span>color, index) =&gt;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">... `&lt;p&gt; ${<span class="SpellE"><span class="GramE">color.toUpperCase</span></span>()}&lt;/p&gt;`);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'&lt;p&gt;
+RED&lt;/p&gt;',<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'&lt;p&gt;
+GREEN&lt;/p&gt;',<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'&lt;p&gt;
+BLUE&lt;/p&gt;',<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'&lt;p&gt;
+YELLOW&lt;/p&gt;',<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><span style="mso-spacerun:yes">&nbsp; </span>'&lt;p&gt;
+PURPLE&lt;/p&gt;'<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">]<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><b><span style="font-family:Consolas">reduce(</span></b></span><b><span style="font-family:Consolas">) method</span></b><span style="font-family:Consolas">
+cumulatively combines each result to return just a single value. Usually takes
+two parameters: accumulated value thus far, and current value in array<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; [1,2,3,4,5<span class="GramE">].reduce</span>(
+(<span class="SpellE">accumulated,val</span>) =&gt; accumulated + <span class="SpellE">val</span> );<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">15<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span class="GramE"><b><span style="font-family:Consolas">filter(</span></b></span><b><span style="font-family:Consolas">) method</span></b><span style="font-family:Consolas">
+returns new array containing items from <span class="SpellE">orig</span> array
+that return true from callback. This example returns only the truthy values:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; const <span class="SpellE">truthyArray</span> =
+[0,1,'0<span class="GramE">',false</span>,true,'hello'];<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE">truthyArray.filter</span>(Boolean);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 1, '0', true, 'hello<span class="GramE">' ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Find <span class="SpellE">falsy</span> values like
+this:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; <span class="SpellE">truthyArray.filter</span>(x
+=<span class="GramE">&gt; !x</span>);<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">[ 0, <span class="GramE">false ]</span><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><b><span style="font-family:Consolas">Chaining Iterators</span></b><span style="font-family:Consolas">: iterator functions can be combined to create
+powerful transformations of data stored in arrays. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">Example: calculate sum of squared numbers using <span class="GramE">map(</span>) then chain the reduce() method to add the results
+together:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">&gt; [1,2,3<span class="GramE">].map</span>(x=&gt;x*x).reduce((<span class="SpellE">acc,x</span>) =&gt; acc + x ); //Wow, a lot going on there!<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="mso-layout-grid-align:none;text-autospace:none"><span style="font-family:Consolas">14<o:p></o:p></span></p>
+
+<p class="MsoNormal"><span style="font-family:Consolas"><o:p>&nbsp;</o:p></span></p>
+
+</div>
+
+
+
+
+</body>ml>

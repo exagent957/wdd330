@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Week02 Team</title>
+  </head>
+  <body>
+    <input id="part1Input" type="text" placeholder="enter some text" />
+    <button id="part1Button" type="button" onclick="processEntry()">
+      Submit Entry
+    </button>
+    <div id="textEntered"></div>
+    <br /><br />
+    <!--Part2 - discovered even though input type is set to number the result is still a string. Only numbers are allowed to be inputted-->
+    <input id="part2Input" type="number" placeholder="type an integer" />
+    <button id="part2Button" type="button" onclick="processNumber()">
+      Submit your number
+    </button>
+    <div id="sumResult"></div>
+    <br /><br />
+    <input id="part3Input1" type="number" placeholder="type first integer" />
+    <input id="part3Input2" type="number" placeholder="type second integer" />
+    <button id="part3Button" type="button" onclick="addNumbers()">+</button>
+    <div id="part3Result"></div>
+  </body>
+  <script src="main.js"></script>
+</html>
