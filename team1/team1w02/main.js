@@ -4,7 +4,7 @@
 function processEntry() {
   const textEntry = document.getElementById("part1Input").value; // text input
   const reply = document.getElementById("textEntered"); //this is the empty div
-  reply.innerHTML = `You entered ${textEntry}`; //put this in empty div
+  reply.innerHTML = `You entered ${textEntry}`; //fill div with this
 }
 //Part2 - input integer. Sum all parts of integer from 1 to integer and show result in div
 //function is called when part2Button is clicked
@@ -39,7 +39,7 @@ function addNumbers() {
   }
 }
 //function is called when part3Button2 is clicked
-//has to be a better way...the is repeating lots of code (just like the addNumbers() function above)
+//has to be a better way...this is repeating lots of code (just like the addNumbers() function above)
 function multiplyNumbers() {
   const firstNumber = parseInt(document.getElementById("part3Input1").value);
   const secondNumber = parseInt(document.getElementById("part3Input2").value);
