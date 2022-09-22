@@ -8,6 +8,10 @@ const weeklyLinks = [
     label: "Week 2 notes",
     url: "w02/w02.html",
   },
+  {
+    label: "Week 2 Team1 Exercise",
+    url: "team1/team1w02/index.html",
+  },
 ];
 //function call
 listWeeklyItems(weeklyLinks, "weeklyList");
