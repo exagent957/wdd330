@@ -18,7 +18,7 @@ const weeklyLinks = [
   },
   {
     label: "Week 3 Team1 Exercise",
-    url: "team1/team1w03/index.html",
+    url: "team1/team1w03/team.html",
   },
 ];
 //function call
