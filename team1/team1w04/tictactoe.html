@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Team 1 W04 Tic Game</title>
+    <link rel="stylesheet" href="tictactoe.css" />
+  </head>
+  <body>
+    <!-- Here is a board built with a table element. It goes together quickly, and need minimal styling...but it will be a bit more work to get at it's children-->
+    <table class="board">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <!-- Here is a board built with simple div elements. The markup is simpler, but it will require more styling to get it to look like a tic tac toe board. All of the cells are direct children of the board, so they will be easy to get a hold of.-->
+    <!-- <div class="divBoard">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div> -->
+    <button id="reset">Reset</button>
+    <script src="tictactoe.js"></script>
+  </body>
+</html>
