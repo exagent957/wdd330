@@ -1,0 +1,43 @@
+h1 {
+    text-align: center;
+}
+
+#game_board {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    padding: 20px;
+}
+
+#game_board div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 40px;
+    height: 166px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.left {
+    border-right: 1px solid black;
+}
+
+.right {
+    border-left: 1px solid black;
+}
+
+.top {
+    border-bottom: 1px solid black;
+}
+
+.bottom{
+    border-top: 1px solid black;
+}

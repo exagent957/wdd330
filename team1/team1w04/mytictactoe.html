@@ -5,25 +5,25 @@
     <meta http-equiv="X-UA-Compatible" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Team 1 W04 Tic Game</title>
-    <link rel="stylesheet" href="tictactoe.css" />
+    <link rel="stylesheet" href="mytictactoe.css" />
   </head>
   <body>
-    <!-- Here is a board built with a table element. It goes together quickly, and need minimal styling...but it will be a bit more work to get at it's children-->
+    <!-- board built with a table element.-->
     <table class="board">
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="square" id="square1"></td>
+        <td class="square" id="square2"></td>
+        <td class="square" id="square3"></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="square" id="square4"></td>
+        <td class="square" id="square5"></td>
+        <td class="square" id="square6"></td>
       </tr>
       <tr>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td class="square" id="square7"></td>
+        <td class="square" id="square8"></td>
+        <td class="square" id="square9"></td>
       </tr>
     </table>
 
@@ -39,7 +39,9 @@
       <div></div>
       <div></div>
     </div> -->
-    <button id="reset">Reset</button>
-    <script src="tictactoe.js"></script>
+    <h1 id="message">X GOES FIRST, Click on a Square</h1>
+    <br />
+    <button id="reset">New Game</button>
+    <script src="mytictactoe.js"></script>
   </body>
 </html>

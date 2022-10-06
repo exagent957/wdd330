@@ -1,9 +1,12 @@
 body {
   background-color: rgb(209, 249, 236);
+  font-family: monospace;
+  margin-left: 20%;
 }
 .board {
   width: 320px;
   height: 320px;
+  margin-top: 5%;
 }
 .board td,
 .board tr {
@@ -23,6 +26,16 @@ body {
 
 .board tr:last-child td {
   border-bottom: 0;
+}
+button {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
 
 /* Styles for the div based board */
