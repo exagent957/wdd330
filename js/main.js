@@ -20,14 +20,23 @@ const weeklyLinks = [
     label: "Week 3 Team1 Exercise",
     url: "team1/team1w03/team.html",
   },
+  {
+    label: "Week 4 notes",
+    url: "w04/w04.html",
+  },
+  {
+    label: "Week 4 Team1 Exercise - Tic Tac Toe",
+    url: "team1/team1w04/index.html",
+  },
+  {
+    label: "Week 4 Team1 Exercise - My Solution",
+    url: "team1/team1w04/mytictactoe.html",
+  },
 ];
 //function call
 listWeeklyItems(weeklyLinks, "weeklyList");
-//setInterval() method repeatedly calls a function or
-//executes a code snippet with a fixed time delay in miliseconds between calls
-//setInterval(listWeeklyItems, 1, weeklyLinks, "weeklyList");
 
-//create the weekly list of links
+//create the weekly list of links function
 function listWeeklyItems(weekItems, listElementName) {
   let ol = document.getElementById(listElementName);
   if (ol) {
