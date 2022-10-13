@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>To Do List</title>
+  </head>
+  <body>
+    <div id="page">
+    <h1>To Do Tasks</h1>
+    <div id="taskContainer" class="max-width">
+      <div id="taskList" class="max-width">
+        <ul>
+         <li><label><input type="checkbox">task task <button type="button">X</button></label></li>
+<li>test</li>
+        </ul>
+      </div>
+      <div id="filter" class="max-width">
+        <ul>
+          <li id="numTasksLeft">X Tasks Left</li>
+          <li id="all">All</li>
+          <li id="active">Active</li>
+          <li id="completed">Completed</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+  <footer>
+    <h2>Create a new task here</h2>
+    <div id="newTaskContainer" class="max-width">
+      <input type="text" id="newTaskInput" name="newTask" />
+      <button type="button" id="addNewTask">+</button>
+    </div>
+  </footer>
+  </div>
+  <script src="ToDos.js"></script>
+</html>

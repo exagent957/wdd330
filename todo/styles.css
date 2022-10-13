@@ -1,0 +1,70 @@
+/* WDD Web Frontend Development II BYUI
+Marc Williamson
+CSS file for todo list project */
+body {
+  background-color: antiquewhite;
+}
+#page {
+  max-width: 800px;
+}
+h1,
+h2 {
+  text-align: center;
+}
+/* max-width class applies to several containers*/
+.max-width {
+  max-width: 30em;
+}
+#taskContainer {
+  background-color: blue;
+  margin: 1% 10%;
+  border: solid 1px black;
+}
+#taskList {
+  background-color: blueviolet;
+}
+#taskList ul {
+  list-style-type: none;
+  padding: 0.5em;
+}
+#taskList li {
+  background-color: darkgoldenrod;
+  width: 29em;
+  padding: 0.2em 0;
+  border: solid 1px lightgray;
+}
+#taskList button {
+  background-color: green;
+  text-align: right;
+}
+#filter {
+  display: table;
+  background-color: coral;
+  margin: 0 auto;
+  width: 100%;
+}
+#filter ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  text-align: center;
+}
+#filter li {
+  background-color: aqua;
+  max-width: 5em;
+  display: inline-flex;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 0.5em 1em;
+  border: 2px solid black;
+}
+#newTaskContainer {
+  background-color: crimson;
+  margin: 1% 10%;
+}
+#newTaskInput {
+  width: 32em;
+  border: solid 1px red;
+}
