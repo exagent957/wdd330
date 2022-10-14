@@ -5,18 +5,19 @@
     <meta http-equiv="X-UA-Compatible" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-    <title>My Tasks</title>
+    <title>To Do List</title>
   </head>
   <body>
+    <main class="app"></main>
     <div id="page">
-    <h1>Tasks</h1>
+    <h1>My Tasks</h1>
     <div id="taskContainer" class="max-width">
-  
-        <ul id="taskList" class="max-width" >
-         <li><label ><input type="checkbox" class="checkbox" >Your tasks will appear here. Add a task below.</label><button type="button">X</button></li>
-         <li><label ><input type="checkbox" >Your tasks will appear here. Add a task below. hfhfhh hdhdhhd hhfhfhu hfhh</label><button type="button">X</button></li>
+      <div id="taskList" class="max-width">
+        <ul>
+         <li><label><input type="checkbox">task task <button type="button">X</button></label></li>
+<li>test</li>
         </ul>
-
+      </div>
       <div id="filter" class="max-width">
         <ul>
           <li id="numTasksLeft">X Tasks Left</li>
@@ -30,10 +31,11 @@
   <footer>
     <h2>Create a new task here</h2>
     <div id="newTaskContainer" class="max-width">
-      <input type="text" id="newTaskInput" placeholder="Enter your new task here"/>
+      <input type="text" id="newTaskInput" name="newTaskInput" placeholder="e.g. study JS Classes" />
       <button type="button" id="addNewTask">+</button>
     </div>
   </footer>
   </div>
-  <script src="index.js" type="module"></script>
+  </main>
+  <script src="ToDos.js"></script>
 </html>

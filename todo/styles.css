@@ -22,8 +22,6 @@ h2 {
 }
 #taskList {
   background-color: blueviolet;
-}
-#taskList ul {
   list-style-type: none;
   padding: 0.5em;
 }
@@ -32,6 +30,10 @@ h2 {
   width: 29em;
   padding: 0.2em 0;
   border: solid 1px lightgray;
+}
+#taskList input {
+  width: 1.2rem;
+  height: 1.2rem;
 }
 #taskList button {
   background-color: green;
