@@ -95,6 +95,7 @@ export default class Tasks {
     this.listElement = listElement;
     console.log(this.listElement);
     this.key = key;
+    console.log(this.key);
     //binding to this specific object when it executes
     //bindTouch has a callback method and they behave strangely in classes
     //We want to bind it to the button but fire a method on the class
