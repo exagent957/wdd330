@@ -3,12 +3,12 @@
 //Module for task list project
 
 //Imports
-import { getFromLS, setToLS, bindClick } from "./utils.js";
+import { getFromLS, setToLS, removeFromLS, bindClick } from "./utils.js";
 
 // Reserve a space in memory for task list
 let liveTasks = null;
 
-//Render Entire List
+//Render Entire List - called after every change
 function renderList(list, element, tasks, hidden) {
   console.log(list);
   element.innerHTML = "";
@@ -18,10 +18,10 @@ function renderList(list, element, tasks, hidden) {
     let button = null;
 
     if (hidden && task.completed) {
-      li.innerHTML = `<label><input type="checkbox" checked><strike>
-       ${task.content}</strike></label><button>X</button>`;
+      li.innerHTML = `<label><input type="checkbox" checked><s>
+       ${task.content}</s></label><button>X</button>`;
     } else {
-      li.innerHTML = `<label><input type="checkbox" ${task.content}</label><button>X</button>`;
+      li.innerHTML = `<label><input type="checkbox"> ${task.content}</label><button>X</button>`;
     }
 
     //Event listener for check box change
@@ -36,7 +36,6 @@ function renderList(list, element, tasks, hidden) {
     //Event listener for button click
     //notice where button is found after label so childNodes[1]
     button = li.childNodes[1];
-    console.log(button);
     if (button) {
       button.addEventListener("click", function () {
         tasks.removeTask(task.id);
@@ -63,17 +62,19 @@ function addNewTask(value, key) {
   };
   //push onto global liveTasks array
   liveTasks.push(newTask);
-  //update LocalStorage after every change
+  //update localStorage after every change
   setToLS(key, liveTasks);
 }
 
-/***** Remove tasks from list of tasks *****/
+/***** Delete tasks from list of tasks *****/
 // keeps every li not equal to key and gets rid of everything that matches key
 function deleteTask(key) {
+  // localStorage.removeItem(key);
+  console.log(localStorage);
   let newList = liveTasks.filter((li) => li.id != key);
   //set global liveTasks to newList
   liveTasks = newList;
-  //update LocalStorage after every change
+  //update localStorage after every change
   setToLS(key, liveTasks);
 }
 
@@ -95,7 +96,7 @@ export default class Tasks {
     console.log(this.listElement);
     this.key = key;
     //binding to this specific object when it executes
-    //bindClick has a callback method and they behave strangely in classes
+    //bindTouch has a callback method and they behave strangely in classes
     //We want to bind it to the button but fire a method on the class
     bindClick("#addNewTask", this.newTask.bind(this));
     this.listTasks();
@@ -119,7 +120,7 @@ export default class Tasks {
 
   /****  complete Task ****/
   completeTask(id) {
-    console.log(id + "checked");
+    console.log(id + " task checked");
     let task = this.findTask(id);
     if (task) {
       //toggling complete status of task
@@ -130,8 +131,8 @@ export default class Tasks {
   }
 
   /**** remove Task ****/
-  removeTask() {
-    console.log(id + "removed");
+  removeTask(id) {
+    console.log(id + " task removed");
     let task = this.findTask(id);
     if (task) {
       deleteTask(id);

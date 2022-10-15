@@ -3,10 +3,9 @@ Marc Williamson
 CSS file for todo list project */
 body {
   background-color: antiquewhite;
-}
-#page {
   max-width: 800px;
 }
+
 h1,
 h2 {
   text-align: center;
@@ -26,18 +25,22 @@ h2 {
   padding: 0.5em;
 }
 #taskList li {
+  display: grid;
+  grid-template-columns: 20fr 1fr;
   background-color: darkgoldenrod;
-  width: 29em;
+  width: 100%;
+  font-size: 1.4em;
   padding: 0.2em 0;
   border: solid 1px lightgray;
 }
 #taskList input {
-  width: 1.2rem;
-  height: 1.2rem;
+  width: 1.3rem;
+  height: 1.3rem;
 }
 #taskList button {
-  background-color: green;
+  background-color: red;
   text-align: right;
+  height: 2em;
 }
 #filter {
   display: table;
@@ -56,17 +59,36 @@ h2 {
   background-color: aqua;
   max-width: 5em;
   display: inline-flex;
+  line-height: 2em;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   padding: 0.5em 1em;
   border: 2px solid black;
 }
+#filter li:hover {
+  background-color: greenyellow;
+}
 #newTaskContainer {
   background-color: crimson;
   margin: 1% 10%;
 }
+h2 {
+  margin-bottom: 0;
+}
 #newTaskInput {
   width: 32em;
+  line-height: 2em;
   border: solid 1px red;
+}
+#newTaskContainer {
+  display: inline-flex;
+}
+#addNewTask {
+  width: 1.6rem;
+  height: 1.8rem;
+  font-size: 1.5em;
+  text-align: center;
+  border: solid 1px black;
+  box-shadow: 4px 2px 2px grey;
 }
