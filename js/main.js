@@ -32,6 +32,14 @@ const weeklyLinks = [
     label: "Week 4 Team1 Exercise - My Solution",
     url: "team1/team1w04/mytictactoe.html",
   },
+  {
+    label: "Week 5 Notes",
+    url: "w05/w05.html",
+  },
+  {
+    label: "Week 5 Team1 Exercise",
+    url: "team1/team1w05/hiking.html",
+  },
 ];
 //function call
 listWeeklyItems(weeklyLinks, "weeklyList");
