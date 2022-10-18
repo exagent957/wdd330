@@ -20,7 +20,7 @@ h2 {
   border: solid 1px black;
 }
 #taskList {
-  background-color: blueviolet;
+  background-color: rgb(83, 58, 246);
   list-style-type: none;
   padding: 0.5em;
 }
@@ -44,7 +44,7 @@ h2 {
 }
 #filter {
   display: table;
-  background-color: coral;
+  background-color: rgb(4, 215, 243);
   margin: 0 auto;
   width: 100%;
 }
@@ -66,9 +66,15 @@ h2 {
   padding: 0.5em 1em;
   border: 2px solid black;
 }
-#filter li:hover {
+#numTasksLeft:hover {
+  background-color: aqua;
+}
+#all:hover,
+#active:hover,
+#completed:hover {
   background-color: greenyellow;
 }
+
 #newTaskContainer {
   background-color: crimson;
   margin: 1% 10%;

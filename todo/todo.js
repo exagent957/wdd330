@@ -3,7 +3,7 @@
 //Module for task list project
 
 //Imports
-import { getFromLS, setToLS, removeFromLS, bindClick } from "./utils.js";
+import { getFromLS, setToLS, bindClick } from "./utils.js";
 
 // Reserve a space in memory for task list
 let liveTasks = null;
@@ -18,8 +18,7 @@ function renderList(list, element, tasks, hidden) {
     let button = null;
 
     if (hidden && task.completed) {
-      li.innerHTML = `<label><input type="checkbox" checked><s>
-       ${task.content}</s></label><button>X</button>`;
+      li.innerHTML = `<label><input type="checkbox" checked><s>${task.content}</s></label><button>X</button>`;
     } else {
       li.innerHTML = `<label><input type="checkbox"> ${task.content}</label><button>X</button>`;
     }
@@ -28,6 +27,7 @@ function renderList(list, element, tasks, hidden) {
     //notice where checkbox is found li.label.checkbox
     checkbox = li.childNodes[0].childNodes[0];
     if (checkbox) {
+      console.log(checkbox);
       checkbox.addEventListener("change", function () {
         tasks.completeTask(task.id);
       });
@@ -37,6 +37,7 @@ function renderList(list, element, tasks, hidden) {
     //notice where button is found after label so childNodes[1]
     button = li.childNodes[1];
     if (button) {
+      console.log(button);
       button.addEventListener("click", function () {
         tasks.removeTask(task.id);
       });
@@ -68,14 +69,13 @@ function addNewTask(value, key) {
 
 /***** Delete tasks from list of tasks *****/
 // keeps every li not equal to key and gets rid of everything that matches key
-function deleteTask(key) {
-  // localStorage.removeItem(key);
-  console.log(localStorage);
+function deleteTask(key, listKey) {
   let newList = liveTasks.filter((li) => li.id != key);
   //set global liveTasks to newList
+  console.log(`key inside deleteTask(): ${key}`);
   liveTasks = newList;
   //update localStorage after every change
-  setToLS(key, liveTasks);
+  setToLS(listKey, liveTasks);
 }
 
 /***********************************************************
@@ -136,14 +136,18 @@ export default class Tasks {
     console.log(id + " task removed");
     let task = this.findTask(id);
     if (task) {
-      deleteTask(id);
+      deleteTask(id, this.key);
       renderList(liveTasks, this.listElement, this, true);
     }
   }
 
   /**** list Tasks ...render the list ****/
   listTasks(hidden = true) {
-    //Bro Chandler said this is not working as it should ... true / false
+    console.log(`this points to ${this} inside listTasks()`);
+    console.log(`this.key points to ${this.key} inside listTasks()`);
+    console.log(
+      `this.listElement points to ${this.listElement} inside listTasks()`
+    );
     renderList(getTasks(this.key), this.listElement, this, hidden);
   }
 }

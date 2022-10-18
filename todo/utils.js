@@ -12,11 +12,6 @@ export function setToLS(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
 }
 
-/******** Remove from Local Storage ***/
-export function removeFromLS(key) {
-  localStorage.removeItem(key);
-}
-
 /****  Event listener to each li ******/
 export function bindClick(selector, callback) {
   const element = document.querySelector(selector);
