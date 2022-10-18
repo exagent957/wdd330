@@ -27,26 +27,26 @@ function renderList(list, element, tasks, hidden) {
     //notice where checkbox is found li.label.checkbox
     checkbox = li.childNodes[0].childNodes[0];
     if (checkbox) {
-      console.log(checkbox);
       checkbox.addEventListener("change", function () {
         tasks.completeTask(task.id);
       });
     }
 
-    //Event listener for button click
+    //Event listener for delete button click
     //notice where button is found after label so childNodes[1]
     button = li.childNodes[1];
     if (button) {
-      console.log(button);
       button.addEventListener("click", function () {
         tasks.removeTask(task.id);
       });
     }
     element.appendChild(li);
   });
+
+  //Event listener for each of the task filters
 }
 
-/***** Read in tasks from Local Storage ****/
+/***** private function - READ IN TASKS from Local Storage ****/
 function getTasks(key) {
   if (liveTasks === null) {
     liveTasks = getFromLS(key) || [];
@@ -54,34 +54,51 @@ function getTasks(key) {
   return liveTasks;
 }
 
-/***** Add new tasks to list of tasks ******/
+/***** private function - ADD NEW TASK to list of tasks ******/
 function addNewTask(value, key) {
   const newTask = {
     id: new Date(),
     content: value,
     completed: false,
   };
-  //push onto global liveTasks array
+  //push onto global activeTasks array
   liveTasks.push(newTask);
   //update localStorage after every change
   setToLS(key, liveTasks);
 }
 
-/***** Delete tasks from list of tasks *****/
+/***** private function - DELETE TASK from list of tasks *****/
 // keeps every li not equal to key and gets rid of everything that matches key
 function deleteTask(key, listKey) {
   let newList = liveTasks.filter((li) => li.id != key);
-  //set global liveTasks to newList
+  //set global activeTasks to newList
   console.log(`key inside deleteTask(): ${key}`);
   liveTasks = newList;
   //update localStorage after every change
   setToLS(listKey, liveTasks);
 }
 
+/***** private function - UPDATE # TASKS LEFT */
+function numTasksLeft() {
+  const tasksLeft = document.querySelector("#numTasksLeft");
+  let counter = 0;
+  if (liveTasks) {
+    for (let i = 0; i < liveTasks.length; i++) {
+      if (liveTasks[i].completed === false) {
+        counter++;
+      }
+    }
+    if (counter !== 1) {
+      tasksLeft.innerHTML = `${counter} Tasks Left`;
+    } else {
+      tasksLeft.innerHTML = `${counter} Task Left`;
+    }
+  }
+}
+
 /***********************************************************
- * THIS SECTION NEEDS WORK - Incomplete ALL, COMPLETED, LEFT TO DO
+ * Filter Tasks Section
  ************************************************************/
-/***** need to add ability to filter tasks */
 function filterTasks(key, completed = true) {
   let tasks = getTasks(key);
   return tasks.filter((li) => li.completed === hidden);
@@ -95,7 +112,7 @@ export default class Tasks {
     this.listElement = listElement;
     console.log(this.listElement);
     this.key = key;
-    console.log(this.key);
+    console.log(`this.key points to ${this.key} in class constructor`);
     //binding to this specific object when it executes
     //bindTouch has a callback method and they behave strangely in classes
     //We want to bind it to the button but fire a method on the class
@@ -129,6 +146,8 @@ export default class Tasks {
       setToLS(this.key, liveTasks);
       renderList(liveTasks, this.listElement, this, true);
     }
+    //Update number of tasks left
+    numTasksLeft();
   }
 
   /**** remove Task ****/
@@ -138,6 +157,7 @@ export default class Tasks {
     if (task) {
       deleteTask(id, this.key);
       renderList(liveTasks, this.listElement, this, true);
+      numTasksLeft();
     }
   }
 
@@ -149,5 +169,6 @@ export default class Tasks {
       `this.listElement points to ${this.listElement} inside listTasks()`
     );
     renderList(getTasks(this.key), this.listElement, this, hidden);
+    numTasksLeft();
   }
 }
