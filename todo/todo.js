@@ -9,7 +9,7 @@ import { getFromLS, setToLS, bindClick } from "./utils.js";
 let liveTasks = null;
 
 //Render Entire List - called after every change
-function renderList(list, element, tasks, hidden) {
+function renderList(list, element, tasks, isActive) {
   console.log(list);
   element.innerHTML = "";
   list.forEach((task) => {
@@ -17,7 +17,7 @@ function renderList(list, element, tasks, hidden) {
     let checkbox = null;
     let button = null;
 
-    if (hidden && task.completed) {
+    if (isActive && task.completed) {
       li.innerHTML = `<label><input type="checkbox" checked><s>${task.content}</s></label><button>X</button>`;
     } else {
       li.innerHTML = `<label><input type="checkbox"> ${task.content}</label><button>X</button>`;
@@ -61,6 +61,7 @@ function renderList(list, element, tasks, hidden) {
     completedFilter.classList.add(["active"]);
     allFilter.classList.remove(["active"]);
     activeFilter.classList.remove(["active"]);
+    showCompleted();
   });
 }
 
@@ -117,9 +118,9 @@ function numTasksLeft() {
 /***********************************************************
  * Filter Tasks Section
  ************************************************************/
-function filterTasks(key, completed = true) {
+function showCompleted(key, completed = true) {
   let tasks = getTasks(key);
-  return tasks.filter((li) => li.completed === hidden);
+  return tasks.filter((li) => li.completed === true);
 }
 
 /*******************************************************************
@@ -129,12 +130,18 @@ export default class Tasks {
   constructor(listElement, key) {
     this.listElement = listElement;
     console.log(this.listElement);
+
+    //key for local storage
     this.key = key;
     console.log(`this.key points to ${this.key} in class constructor`);
     //binding to this specific object when it executes
-    //bindTouch has a callback method and they behave strangely in classes
+    //bindClick has a callback method and they behave strangely in classes
     //We want to bind it to the button but fire a method on the class
     bindClick("#addNewTask", this.newTask.bind(this));
+    bindClick("#all", this.listTasks.bind(this));
+    bindClick("#active", this.listTasks.bind(this, true));
+    bindClick("#completed", this.listTasks.bind(this, false));
+
     this.listTasks();
   }
 
@@ -180,13 +187,13 @@ export default class Tasks {
   }
 
   /**** list Tasks ...render the list ****/
-  listTasks(hidden = true) {
+  listTasks(isActive = true) {
     console.log(`this points to ${this} inside listTasks()`);
     console.log(`this.key points to ${this.key} inside listTasks()`);
     console.log(
       `this.listElement points to ${this.listElement} inside listTasks()`
     );
-    renderList(getTasks(this.key), this.listElement, this, hidden);
+    renderList(getTasks(this.key), this.listElement, this, isActive);
     numTasksLeft();
   }
 }
