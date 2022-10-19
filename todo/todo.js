@@ -19,31 +19,35 @@ function renderList(list, element, tasks, isActive) {
 
     if (isActive && task.completed) {
       li.innerHTML = `<label><input type="checkbox" checked><s>${task.content}</s></label><button>X</button>`;
-    } else {
+    } else if (isActive && !task.completed) {
+      li.innerHTML = `<label><input type="checkbox"> ${task.content}</label><button>X</button>`;
+    } else if (!isActive && !task.completed) {
       li.innerHTML = `<label><input type="checkbox"> ${task.content}</label><button>X</button>`;
     }
 
-    //Event listener for check box change
-    //notice where checkbox is found li.label.checkbox
-    checkbox = li.childNodes[0].childNodes[0];
-    if (checkbox) {
-      checkbox.addEventListener("change", function () {
-        tasks.completeTask(task.id);
-      });
-    }
+    if (isActive || (!isActive && !task.completed)) {
+      //Event listener for check box change
+      //notice where checkbox is found li.label.checkbox
+      checkbox = li.childNodes[0].childNodes[0];
+      if (checkbox) {
+        checkbox.addEventListener("change", function () {
+          tasks.completeTask(task.id);
+        });
+      }
 
-    //Event listener for delete button click
-    //notice where button is found after label so childNodes[1]
-    button = li.childNodes[1];
-    if (button) {
-      button.addEventListener("click", function () {
-        tasks.removeTask(task.id);
-      });
+      //Event listener for delete button click
+      //notice where button is found after label so childNodes[1]
+      button = li.childNodes[1];
+      if (button) {
+        button.addEventListener("click", function () {
+          tasks.removeTask(task.id);
+        });
+      }
+      element.appendChild(li);
     }
-    element.appendChild(li);
   });
 
-  //Handle event listeners for each of the task filters
+  //Handle state of each filter button
   const allFilter = document.querySelector("#all");
   const activeFilter = document.querySelector("#active");
   const completedFilter = document.querySelector("#completed");
