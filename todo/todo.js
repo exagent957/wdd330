@@ -43,7 +43,25 @@ function renderList(list, element, tasks, hidden) {
     element.appendChild(li);
   });
 
-  //Event listener for each of the task filters
+  //Handle event listeners for each of the task filters
+  const allFilter = document.querySelector("#all");
+  const activeFilter = document.querySelector("#active");
+  const completedFilter = document.querySelector("#completed");
+  allFilter.addEventListener("click", () => {
+    allFilter.classList.add(["active"]);
+    activeFilter.classList.remove(["active"]);
+    completedFilter.classList.remove(["active"]);
+  });
+  activeFilter.addEventListener("click", () => {
+    activeFilter.classList.add(["active"]);
+    allFilter.classList.remove(["active"]);
+    completedFilter.classList.remove(["active"]);
+  });
+  completedFilter.addEventListener("click", () => {
+    completedFilter.classList.add(["active"]);
+    allFilter.classList.remove(["active"]);
+    activeFilter.classList.remove(["active"]);
+  });
 }
 
 /***** private function - READ IN TASKS from Local Storage ****/

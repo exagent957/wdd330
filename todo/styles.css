@@ -20,18 +20,18 @@ h2 {
   border: solid 1px black;
 }
 #taskList {
-  background-color: rgb(83, 58, 246);
+  background-color: rgb(93, 166, 255);
   list-style-type: none;
   padding: 0.5em;
 }
 #taskList li {
   display: grid;
   grid-template-columns: 20fr 1fr;
-  background-color: darkgoldenrod;
+  background-color: rgb(243, 212, 134);
   width: 100%;
   font-size: 1.4em;
   padding: 0.2em 0;
-  border: solid 1px lightgray;
+  border: solid 1px rgb(108, 106, 106);
 }
 #taskList input {
   width: 1.3rem;
@@ -74,7 +74,12 @@ h2 {
 #completed:hover {
   background-color: greenyellow;
 }
-
+#filter li.active {
+  background-color: yellow;
+  font-weight: 700;
+  font-size: 1.2em;
+  border: solid 2px black;
+}
 #newTaskContainer {
   background-color: crimson;
   margin: 1% 10%;
