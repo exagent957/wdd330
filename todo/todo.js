@@ -123,7 +123,7 @@ function filterTasks(key, completed = true) {
 }
 
 /*******************************************************************
- *                       Public    Tasks Class                     *
+ *                       Public Class -    Tasks                   *
  *******************************************************************/
 export default class Tasks {
   constructor(listElement, key) {
