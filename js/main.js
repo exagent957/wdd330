@@ -40,6 +40,10 @@ const weeklyLinks = [
     label: "Week 5 Team1 Exercise",
     url: "team1/team1w05/hiking.html",
   },
+  {
+    label: "Week 6 - TO DO Web Application",
+    url: "todo/index.html",
+  },
 ];
 //function call
 listWeeklyItems(weeklyLinks, "weeklyList");
