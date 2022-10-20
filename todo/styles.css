@@ -38,7 +38,7 @@ h2 {
   height: 1.3rem;
 }
 #taskList button {
-  background-color: red;
+  background-color: rgb(232, 160, 160);
   text-align: right;
   height: 2em;
 }
@@ -67,7 +67,7 @@ h2 {
   border: 2px solid black;
 }
 #numTasksLeft:hover {
-  background-color: aqua;
+  background-color: rgb(179, 247, 247);
 }
 #all:hover,
 #active:hover,
@@ -81,6 +81,7 @@ h2 {
   border: solid 2px black;
 }
 #newTaskContainer {
+  display: inline-flex;
   background-color: crimson;
   margin: 1% 10%;
 }
@@ -90,10 +91,7 @@ h2 {
 #newTaskInput {
   width: 32em;
   line-height: 2em;
-  border: solid 1px red;
-}
-#newTaskContainer {
-  display: inline-flex;
+  border: solid 1px rgb(246, 11, 11);
 }
 #addNewTask {
   width: 1.6rem;

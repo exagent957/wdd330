@@ -9,7 +9,7 @@ import { getFromLS, setToLS, bindClick } from "./utils.js";
 let liveTasks = null;
 
 //Render Entire List - called after every change
-function renderList(list, element, tasks, isActive) {
+function renderList(list, element, tasks, unfiltered) {
   console.log(list);
   element.innerHTML = "";
   list.forEach((task) => {
@@ -17,23 +17,26 @@ function renderList(list, element, tasks, isActive) {
     let checkbox = null;
     let button = null;
 
-    if (isActive && task.completed) {
+    //first 2 states are used for listing all tasks
+    if (unfiltered && task.completed) {
       li.innerHTML = `<label><input type="checkbox" checked><s>${task.content}</s></label><button>X</button>`;
-    } else if (isActive && !task.completed) {
+    } else if (unfiltered && !task.completed) {
       li.innerHTML = `<label><input type="checkbox"> ${task.content}</label><button>X</button>`;
-    } else if (!isActive && !task.completed) {
+      //true when Active filter button clicked
+    } else if (!unfiltered && !task.completed) {
       li.innerHTML = `<label><input type="checkbox"> ${task.content}</label><button>X</button>`;
+      //true when Completed filter button clicked - BUG HERE -places no elements into document
+    } else if (!unfiltered && task.completed) {
+      li.innerHTML = `<label><input type="checkbox" checked><s>${task.content}</s></label><button>X</button>`;
     }
 
-    if (isActive || (!isActive && !task.completed)) {
-      //Event listener for check box change
-      //notice where checkbox is found li.label.checkbox
-      checkbox = li.childNodes[0].childNodes[0];
-      if (checkbox) {
-        checkbox.addEventListener("change", function () {
-          tasks.completeTask(task.id);
-        });
-      }
+    //Event listener for check box change
+    //notice where checkbox is found li.label.checkbox
+    checkbox = li.childNodes[0].childNodes[0];
+    if (checkbox) {
+      checkbox.addEventListener("change", function () {
+        tasks.completeTask(task.id);
+      });
 
       //Event listener for delete button click
       //notice where button is found after label so childNodes[1]
@@ -47,7 +50,7 @@ function renderList(list, element, tasks, isActive) {
     }
   });
 
-  //Handle state of each filter button
+  //Handle style of each filter button when clicked
   const allFilter = document.querySelector("#all");
   const activeFilter = document.querySelector("#active");
   const completedFilter = document.querySelector("#completed");
@@ -65,11 +68,10 @@ function renderList(list, element, tasks, isActive) {
     completedFilter.classList.add(["active"]);
     allFilter.classList.remove(["active"]);
     activeFilter.classList.remove(["active"]);
-    showCompleted();
   });
 }
 
-/***** private function - READ IN TASKS from Local Storage ****/
+/***** private function - READ IN key:task from Local Storage ****/
 function getTasks(key) {
   if (liveTasks === null) {
     liveTasks = getFromLS(key) || [];
@@ -95,7 +97,6 @@ function addNewTask(value, key) {
 function deleteTask(key, listKey) {
   let newList = liveTasks.filter((li) => li.id != key);
   //set global activeTasks to newList
-  console.log(`key inside deleteTask(): ${key}`);
   liveTasks = newList;
   //update localStorage after every change
   setToLS(listKey, liveTasks);
@@ -119,14 +120,6 @@ function numTasksLeft() {
   }
 }
 
-/***********************************************************
- * Filter Tasks Section
- ************************************************************/
-function showCompleted(key, completed = true) {
-  let tasks = getTasks(key);
-  return tasks.filter((li) => li.completed === true);
-}
-
 /*******************************************************************
  *                       Public Class -    Tasks                   *
  *******************************************************************/
@@ -136,15 +129,16 @@ export default class Tasks {
     console.log(this.listElement);
 
     //key for local storage
+    //this.key = key represents "task"
     this.key = key;
-    console.log(`this.key points to ${this.key} in class constructor`);
     //binding to this specific object when it executes
     //bindClick has a callback method and they behave strangely in classes
     //We want to bind it to the button but fire a method on the class
+    //console.log reports "this" = [object Object] which I do not understand
     bindClick("#addNewTask", this.newTask.bind(this));
     bindClick("#all", this.listTasks.bind(this));
-    bindClick("#active", this.listTasks.bind(this, true));
-    bindClick("#completed", this.listTasks.bind(this, false));
+    bindClick("#active", this.showActive.bind(this, false));
+    bindClick("#completed", this.showCompleted.bind(this, false));
 
     this.listTasks();
   }
@@ -175,7 +169,6 @@ export default class Tasks {
       setToLS(this.key, liveTasks);
       renderList(liveTasks, this.listElement, this, true);
     }
-    //Update number of tasks left
     numTasksLeft();
   }
 
@@ -191,13 +184,24 @@ export default class Tasks {
   }
 
   /**** list Tasks ...render the list ****/
-  listTasks(isActive = true) {
-    console.log(`this points to ${this} inside listTasks()`);
-    console.log(`this.key points to ${this.key} inside listTasks()`);
-    console.log(
-      `this.listElement points to ${this.listElement} inside listTasks()`
-    );
-    renderList(getTasks(this.key), this.listElement, this, isActive);
+  listTasks(unfiltered = true) {
+    renderList(getTasks(this.key), this.listElement, this, unfiltered);
     numTasksLeft();
+  }
+
+  /***** show active tasks ************/
+  showActive(unfiltered = false) {
+    let newList = [];
+    let tasks = getTasks(this.key);
+    newList = tasks.filter((li) => li.completed === false);
+    renderList(newList, this.listElement, this, unfiltered);
+  }
+
+  /***** show completed tasks *********/
+  showCompleted(unfiltered = false) {
+    let newList = [];
+    let tasks = getTasks(this.key);
+    newList = tasks.filter((li) => li.completed === true);
+    renderList(newList, this.listElement, this, unfiltered);
   }
 }
