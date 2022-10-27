@@ -44,6 +44,14 @@ const weeklyLinks = [
     label: "Week 6 - TO DO Web Application",
     url: "todo/index.html",
   },
+  {
+    label: "Week 7 Notes",
+    url: "w07/w07.html",
+  },
+  {
+    label: "Week 7 Team1 Exercise - Add comments sections to hikes app",
+    url: "team1/team1w07/teamassignment7.html",
+  },
 ];
 //function call
 listWeeklyItems(weeklyLinks, "weeklyList");

@@ -1,110 +1,76 @@
-//commentModel
-/*****************************************************
- *           CommentModel CLASS - not exported       *
- *****************************************************/
-class CommentModel {
+//Object Class- Comments
+export class Comments {
   constructor(type) {
     this.type = type;
-    this.comments = readFromLS(this.type) || [];
   }
 
-  /***** get comments - filtered or all *********/
-  getComments(qry = null) {
-    if (qry === null) {
-      return this.comments;
-    } else {
-      return this.comments.filter((el) => el.name === qry);
+  getCommentsLs() {
+    return JSON.parse(localStorage.getItem("comments")) || [];
+  }
+  setCommentsLs(comments) {
+    localStorage.setItem("comments", JSON.stringify(comments));
+  }
+
+  hideAllComments() {
+    const allCommentsDiv = document.getElementById("allComments");
+    allCommentsDiv.innerHTML = "";
+  }
+
+  getAllComments() {
+    const all = JSON.parse(localStorage.getItem("comments")) || [];
+    const allComments = all.filter((comment) => comment.type === this.type);
+    return allComments;
+  }
+
+  showAllComments() {
+    const allCommentsDiv = document.getElementById("allComments");
+    const allComments = this.getAllComments();
+
+    for (let i = 0; i < allComments.length; i++) {
+      const div = document.createElement("div");
+      div.innerHTML = `
+                <div class="comment">
+                    <div>Name: ${allComments[i].name}</div>
+                    <div>Date: ${allComments[i].date}</div>
+                    <div>Comment: ${allComments[i].content}</div>
+                </div>
+                <br>
+            `;
+      allCommentsDiv.appendChild(div);
     }
   }
-  /**** add comment *****/
-  addComment(postName, comment) {
+
+  showCommentsForThisHike(name) {
+    const allComments = this.getAllComments();
+    const commentsForThisHike = allComments.filter(
+      (comments) => comments.name === name
+    );
+
+    const commentsDiv = document.createElement("div");
+    for (let i = 0; i < commentsForThisHike.length; i++) {
+      const div = document.createElement("div");
+      div.innerHTML = `
+                <div class="detailed-view-comment">
+                    <div>Name: ${commentsForThisHike[i].name}</div>
+                    <div>Date: ${commentsForThisHike[i].date}</div>
+                    <div>Comment: ${commentsForThisHike[i].content}</div>
+                </div>
+                <br>
+            `;
+      commentsDiv.appendChild(div);
+    }
+    return commentsDiv.innerHTML;
+  }
+
+  addComment(name, inputValue) {
+    const comments = this.getCommentsLs();
     const newComment = {
-      name: postName,
-      comment: comment,
+      type: this.type,
+      name: name,
       date: new Date(),
+      content: inputValue,
     };
-    this.comments.push(newComment);
-    writeToLS(this.type, this.comments);
+    comments.push(newComment);
+    this.setCommentsLs(comments);
   }
 }
-/**************** End of CommentModel Class *************/
-
-/****  private methods for CommentModel Class ***********/
-
-/***** write to Local Storage ******/
-function writeToLS(key, data) {
-  window.localStorage.setItem(key, JSON.stringify(data));
-}
-
-/***** read from Local Storage *****/
-function readFromLS(key) {
-  return JSON.parse(window.localStorage.getItem(key));
-}
-
-/***** build the view -  VIEWER CODE *****/
-const commentUI = `<div class="addComment"><h2>Add a comment</h2>
-<input type="text" id="commentEntry" /><button id="commentSubmit">Comment</button></div><h2>Comments</h2><ul class="comments"></ul>`;
-
-/***** render Comment List ********/
-function renderCommentList(element, comments) {
-  element.innerHTML = "";
-  comments.forEach((el) => {
-    let item = document.createElement("li");
-    item.innerHTML = `${el.name}: ${el.comment}`;
-    element.appendChild(item);
-  });
-}
-
-// Comments: this code handles getting the list of comments from the data source, and outputting them to the screen at the right time.  This is often categorized as Controller code.
-/*********************************************************
- *            Comments Class   CONTROLLER CODE           *
- *********************************************************/
-class Comments {
-  constructor(type, commentElementId) {
-    this.type = type;
-    this.commentElementId = commentElementId;
-    this.model = new CommentModel(this.type);
-  }
-  /**** event listener submit *****/
-  addSubmitListener(postName) {
-    // use element.ontouchend vs element.touchend to avoid more than one listener getting attached at a time to the button.
-    document.getElementById("commentSubmit").ontouchend = () => {
-      this.model.addComment(
-        postName,
-        document.getElementById("commentEntry").value
-      );
-      document.getElementById("commentEntry").value = "";
-      this.showCommentList(postName);
-    };
-  }
-  /***** show comments list *******/
-  showCommentList(qry = null) {
-    try {
-      const parent = document.getElementById(this.commentElementId);
-      if (!parent) throw new Error("comment parent not found");
-      // check to see if the commentUI code has been added yet
-      if (parent.innerHTML === "") {
-        parent.innerHTML = commentUI;
-      }
-      if (qry !== null) {
-        // looking at one post, show comments and new comment button
-        document.querySelector(".addComment").style.display = "block";
-        this.addSubmitListener(qry);
-      } else {
-        // no post name provided, hide comment entry
-        document.querySelector(".addComment").style.display = "none";
-      }
-      // get the comments from the model
-      let comments = this.model.getComments(qry);
-      if (comments === null) {
-        // avoid an error if there are no comments yet.
-        comments = [];
-      }
-      renderCommentList(parent.lastChild, comments);
-    } catch (error) {
-      console.log(error);
-    }
-  }
-}
-export default Comments;
-/***** End of Comments CLASS ***********************/
