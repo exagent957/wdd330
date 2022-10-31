@@ -1,8 +1,6 @@
 //Team1 W08 API Activity
 //Star Wars API - fetching and displaying pagination
 
-const outputDiv = document.querySelector("#outputDiv");
-
 /************ Model Code ******************
  * Should handle anything to do with data *
  * Usually connected to the database      *
@@ -15,7 +13,7 @@ const outputDiv = document.querySelector("#outputDiv");
 function getJSON(url) {
   return fetch(url)
     .then((response) => {
-      outputDiv.innerHTML = "Waiting for response from server ...";
+      parentDiv.innerHTML = "Waiting for response from server ...";
       if (!response.ok) {
         throw Error(response.statusText);
       } else {
@@ -36,15 +34,19 @@ function getJSON(url) {
  ********************************************/
 /**** Show People  ******/
 function showPeople(url = "https://swapi.dev/api/people/") {
-  getJSON(url).then(function (data) {
+  getJSON(url).then((data) => {
     console.log({ data });
-    const results = data.results;
-    console.log({ results });
+    const people = data.results;
+    console.log({ people });
+    const peopleListElement = document.querySelector("#parentDiv");
+    console.log(peopleListElement);
+    peopleListElement.innerHTML = "We have a list of people";
+    renderPeopleList(people, peopleListElement);
   });
 }
 showPeople();
 
-/*********** Views Code *******************
+/*********** Views Code *********************
  * Renders data representation .
  * User Interface. Data collected by Model
  * Processed by Controller. Controller
@@ -52,4 +54,8 @@ showPeople();
  *********************************************/
 
 /***** Render People List *****/
-function renderPeopleList() {}
+function renderPeopleList(people, peopleListElement) {
+  //const list = peopleListElement.children[0];
+  //list.innerHTML = "";
+  people.forEach((person) => console.log(person));
+}
