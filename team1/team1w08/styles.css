@@ -6,9 +6,9 @@
   --swgreen: #334e30;
   font-family: "Roboto", sans-serif;
 }
-/*.hidden {
+.hidden {
   display: none;
-}*/
+}
 body {
   background-color: var(--swgrey);
 }
@@ -50,6 +50,14 @@ a {
   color: yellow;
   padding: 0.5em;
 }
+dt {
+  float: left;
+  clear: left;
+  width: 110px;
+  font-weight: bold;
+  color: black;
+}
 dd {
-  font-weight: 700;
+  margin: 0 0 0 80px;
+  padding: 0 0 0.5em 0;
 }

@@ -38,15 +38,22 @@ function showPeople(url = "https://swapi.dev/api/people/") {
     const people = data.results;
     console.log({ people });
     const peopleListElement = document.querySelector("#parentDiv");
+    const detailsContainer = document.querySelector("#detailsContainer");
     console.log(peopleListElement);
     renderPeopleList(people, peopleListElement);
     if (data.next) {
       const next = document.querySelector("#next");
-      next.ontouchend = () => showPeople(data.next);
+      next.ontouchend = () => {
+        showPeople(data.next);
+        detailsContainer.classList.add("hidden");
+      };
     }
     if (data.previous) {
       const previous = document.querySelector("#previous");
-      previous.ontouchend = () => showPeople(data.previous);
+      previous.ontouchend = () => {
+        showPeople(data.previous);
+        detailsContainer.classList.add("hidden");
+      };
     }
   });
 }
@@ -54,6 +61,8 @@ showPeople();
 
 /**** Person Details ****/
 function showPersonDetails(person) {
+  const detailsContainer = document.querySelector("#detailsContainer");
+  detailsContainer.classList.remove("hidden");
   renderPersonDetails(person);
 }
 
@@ -83,7 +92,6 @@ function renderPeopleList(people, peopleListElement) {
 
 /**** Render Person Details ****/
 function renderPersonDetails(person) {
-  const detailsContainer = document.querySelector("#detailsContainer");
   const elName = document.querySelector(".name");
   const elGender = document.querySelector(".gender");
   const elHeight = document.querySelector(".height");
