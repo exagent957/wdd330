@@ -17,7 +17,6 @@ function getJSON(url) {
       if (!response.ok) {
         throw Error(response.statusText);
       } else {
-        console.log("Response with no error");
         return response.json();
       }
     })
@@ -54,7 +53,9 @@ function showPeople(url = "https://swapi.dev/api/people/") {
 showPeople();
 
 /**** Person Details ****/
-function getPersonDetails() {}
+function showPersonDetails(person) {
+  renderPersonDetails(person);
+}
 
 /*********** Views Code *********************
  * Renders data representation .
@@ -74,8 +75,28 @@ function renderPeopleList(people, peopleListElement) {
     listItem.innerHTML = `<a href="${person.url}">${person.name}</a>`;
     listItem.addEventListener("click", (e) => {
       e.preventDefault();
-      getPersonDetails(person.url);
+      showPersonDetails(person);
     });
     list.appendChild(listItem);
   });
+}
+
+/**** Render Person Details ****/
+function renderPersonDetails(person) {
+  const detailsContainer = document.querySelector("#detailsContainer");
+  const elName = document.querySelector(".name");
+  const elGender = document.querySelector(".gender");
+  const elHeight = document.querySelector(".height");
+  const elMass = document.querySelector(".mass");
+  const elHairColor = document.querySelector(".hair_color");
+  const elEyeColor = document.querySelector(".eye_color");
+  const elSkinColor = document.querySelector(".skin_color");
+
+  elName.innerText = person.name;
+  elGender.innerText = person.gender;
+  elHeight.innerText = person.height;
+  elMass.innerText = person.mass;
+  elHairColor.innerText = person.hair_color;
+  elEyeColor.innerText = person.eye_color;
+  elSkinColor.innerText = person.skin_color;
 }
