@@ -40,11 +40,16 @@ function showPeople(url = "https://swapi.dev/api/people/") {
     console.log({ people });
     const peopleListElement = document.querySelector("#parentDiv");
     console.log(peopleListElement);
-    peopleListElement.innerText = "We have an array of 10 people";
     renderPeopleList(people, peopleListElement);
+    if (data.next) {
+      console.log(data.next);
+    }
   });
 }
 showPeople();
+
+/**** Person Details ****/
+function getPersonDetails() {}
 
 /*********** Views Code *********************
  * Renders data representation .
@@ -57,11 +62,15 @@ showPeople();
 function renderPeopleList(people, peopleListElement) {
   const list = peopleListElement;
   console.log({ list });
-  list.innerHTML = "<hl>Name:</hl>";
+  list.innerHTML = "<h2>Star Wars Characters</h2>";
   people.forEach(function (person) {
     console.log(person);
     let listItem = document.createElement("p");
     listItem.innerHTML = `<a href="${person.url}">${person.name}</a>`;
+    listItem.addEventListener("click", (e) => {
+      e.preventDefault();
+      getPersonDetails(person.url);
+    });
     list.appendChild(listItem);
   });
 }

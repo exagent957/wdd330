@@ -1,0 +1,29 @@
+:root {
+  --swgrey: #7e7863;
+  --swtan: #ad7d37;
+  --swblue: #2e557c;
+  --swmaroon: #381010;
+  --swgreen: #334e30;
+}
+body {
+  background-color: var(--swgrey);
+}
+main {
+  background-color: var(--swmaroon);
+  max-width: 600px;
+  margin: auto;
+}
+h1,
+h2 {
+  background-color: var(--swgreen);
+  color: var(--swtan);
+  margin: 0;
+  border: solid 3px var(--swblue);
+  text-align: center;
+}
+p {
+  margin: 0.5em;
+}
+a {
+  color: white;
+}
