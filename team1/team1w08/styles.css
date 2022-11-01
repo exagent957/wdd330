@@ -4,6 +4,7 @@
   --swblue: #2e557c;
   --swmaroon: #381010;
   --swgreen: #334e30;
+  font-family: "Roboto", sans-serif;
 }
 body {
   background-color: var(--swgrey);
@@ -23,7 +24,21 @@ h2 {
 }
 p {
   margin: 0.5em;
+  line-height: 1.5em;
 }
 a {
   color: white;
+  font-size: 1.2em;
+}
+#buttons {
+  background-color: var(--swtan);
+  font-size: 1.2em;
+  text-align: center;
+  padding: 0.5em;
+}
+#buttons a {
+  text-decoration: none;
+  color: var(--swblue);
+  font-weight: 900;
+  padding: 1em;
 }

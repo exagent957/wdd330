@@ -42,7 +42,12 @@ function showPeople(url = "https://swapi.dev/api/people/") {
     console.log(peopleListElement);
     renderPeopleList(people, peopleListElement);
     if (data.next) {
-      console.log(data.next);
+      const next = document.querySelector("#next");
+      next.ontouchend = () => showPeople(data.next);
+    }
+    if (data.previous) {
+      const previous = document.querySelector("#previous");
+      previous.ontouchend = () => showPeople(data.previous);
     }
   });
 }
