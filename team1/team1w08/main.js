@@ -13,7 +13,7 @@
 function getJSON(url) {
   return fetch(url)
     .then((response) => {
-      parentDiv.innerHTML = "Waiting for response from server ...";
+      parentDiv.innerText = "Waiting for response from server ...";
       if (!response.ok) {
         throw Error(response.statusText);
       } else {
@@ -40,7 +40,7 @@ function showPeople(url = "https://swapi.dev/api/people/") {
     console.log({ people });
     const peopleListElement = document.querySelector("#parentDiv");
     console.log(peopleListElement);
-    peopleListElement.innerHTML = "We have a list of people";
+    peopleListElement.innerText = "We have an array of 10 people";
     renderPeopleList(people, peopleListElement);
   });
 }
@@ -55,7 +55,13 @@ showPeople();
 
 /***** Render People List *****/
 function renderPeopleList(people, peopleListElement) {
-  //const list = peopleListElement.children[0];
-  //list.innerHTML = "";
-  people.forEach((person) => console.log(person));
+  const list = peopleListElement;
+  console.log({ list });
+  list.innerHTML = "<hl>Name:</hl>";
+  people.forEach(function (person) {
+    console.log(person);
+    let listItem = document.createElement("p");
+    listItem.innerHTML = `<a href="${person.url}">${person.name}</a>`;
+    list.appendChild(listItem);
+  });
 }
