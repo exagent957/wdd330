@@ -58,7 +58,7 @@ const weeklyLinks = [
   },
   {
     label: "Week 8 Team1 Exercise - Star Wars API",
-    url: "team1/team1w08/swapi.html",
+    url: "team1/team1w08/starwarsapi.html",
   },
 ];
 //function call
