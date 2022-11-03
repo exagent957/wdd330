@@ -52,6 +52,14 @@ const weeklyLinks = [
     label: "Week 7 Team1 Exercise - Add comments sections to hikes app",
     url: "team1/team1w07/teamassignment7.html",
   },
+  {
+    label: "Week 8 Notes",
+    url: "w08/w08.html",
+  },
+  {
+    label: "Week 8 Team1 Exercise - Star Wars API",
+    url: "team1/team1w08/swapi.html",
+  },
 ];
 //function call
 listWeeklyItems(weeklyLinks, "weeklyList");
