@@ -47,10 +47,18 @@ function showPeople(url = "https://swapi.dev/api/people/") {
         showPeople(data.next);
         detailsContainer.classList.add("hidden");
       };
+      next.onclick = () => {
+        showPeople(data.next);
+        detailsContainer.classList.add("hidden");
+      };
     }
     if (data.previous) {
       const previous = document.querySelector("#previous");
       previous.ontouchend = () => {
+        showPeople(data.previous);
+        detailsContainer.classList.add("hidden");
+      };
+      previous.onclick = () => {
         showPeople(data.previous);
         detailsContainer.classList.add("hidden");
       };
