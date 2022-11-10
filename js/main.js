@@ -66,7 +66,7 @@ const weeklyLinks = [
   },
   {
     label: "Week 9 Team1 Exercise - Drumkit",
-    url: "team1/team1w09/drumkit.html",
+    url: "team1/team1w09/drumKit.html",
   },
 ];
 //function call
