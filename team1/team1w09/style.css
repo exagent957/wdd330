@@ -50,3 +50,6 @@ kbd {
   letter-spacing: 0.1rem;
   color: #ffc600;
 }
+.moveDown {
+  position: relative;
+}

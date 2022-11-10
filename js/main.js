@@ -60,6 +60,14 @@ const weeklyLinks = [
     label: "Week 8 Team1 Exercise - Star Wars API",
     url: "team1/team1w08/starwarsapi.html",
   },
+  {
+    label: "Week 9 Notes",
+    url: "w09/w09.html",
+  },
+  {
+    label: "Week 9 Team1 Exercise - Drumkit",
+    url: "team1/team1w09/drumkit.html",
+  },
 ];
 //function call
 listWeeklyItems(weeklyLinks, "weeklyList");
