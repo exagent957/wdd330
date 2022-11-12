@@ -40,9 +40,8 @@ const jsonUrl = "./farmEvents.json";
  * fetch returns string. json() method    *
  * resolves promise as JS object          *
  ******************************************/
-// need to turn this into function
 function getWeather(apiUrl) {
-  fetch(apiUrl)
+  return fetch(apiUrl)
     .then((response) => {
       if (!response.ok) {
         throw Error(response.statusText);
@@ -52,17 +51,9 @@ function getWeather(apiUrl) {
     })
     .catch(function (error) {
       console.log("Error: ", error);
-    })
-    .then((weather) => {
-      console.log(weather.observations);
-      console.log(weather.observations[0].imperial.temp);
-      console.log(weather.observations[0].imperial.windChill);
-      console.log(weather.observations[0].imperial.windSpeed);
-      console.log(weather.observations[0].imperial.windGust);
-      console.log(weather.observations[0].imperial.precipRate);
     });
 }
-getWeather(apiUrl);
+
 // Now lets work on accessing local JW Farm JSON data
 // import events from "./farmEvent.json" assert { type: "JSON" };
 // console.log(events); //error
@@ -82,6 +73,7 @@ fetch(jsonUrl)
     console.log(obj);
   });
 
+/***** CONTROLLER SECTION *****************/
 //This will go in controller
 // function showCurrent(apiUrl) {
 //   getJSON(apiUrl).then((data) => {
@@ -92,10 +84,59 @@ fetch(jsonUrl)
 // }
 // showCurrent(apiUrl);
 
-//View
+function showWeather(apiUrl) {
+  getWeather(apiUrl).then((weather) => {
+    console.log(weather);
+    renderWeather(weather);
+  });
+}
+showWeather(apiUrl);
+
+/**** VIEW SECTION ********************************/
 //Get weather elements
 function renderWeather(weather) {
+  const parentDiv = document.querySelector("#weatherDiv");
   const p = document.createElement("p");
-  let temp = weather.observations[0].imperial.temp;
-  document.querySelector("p<span></span>").innerText = temp;
+  const temp = weather.observations[0].imperial.temp;
+  const chill = weather.observations[0].imperial.windChill;
+  const speed = weather.observations[0].imperial.windSpeed;
+  const gust = weather.observations[0].imperial.windGust;
+  let direction = weather.observations[0].winddir;
+  let precipRate = weather.observations[0].imperial.precipRate;
+
+  document.querySelector("#p1 span").innerHTML = `${temp}<span>&#8457</span>`;
+  document.querySelector("#p2 span").innerHTML = `${chill}<span>&#8457</span>`;
+  /* Convert wind direction degree into cardinal units */
+  if (direction < 22.5) {
+    direction = "N";
+  } else if (direction >= 22.5 && direction < 67.5) {
+    direction = "NNE";
+  } else if (direction >= 67.5 && direction < 112.5) {
+    direction = "E";
+  } else if (direction >= 112.5 && direction < 157.5) {
+    direction = "SSE";
+  } else if (direction >= 157.5 && direction < 202.5) {
+    direction = "S";
+  } else if (direction >= 202.5 && direction < 247.5) {
+    direction = "SSW";
+  } else if (direction >= 247.5 && direction < 292.5) {
+    direction = "W";
+  } else direction = "NNW";
+
+  /* Show wind calm when under 2mph*/
+  if (speed > 2) {
+    document.querySelector(
+      "#p3 span"
+    ).innerHTML = `${direction} at ${speed} MPH gusting to ${gust} MPH`;
+  } else {
+    document.querySelector("#p3 span").innerHTML = "Calm";
+  }
+  /* if not currently raining say so */
+  if (precipRate === 0) {
+    document.querySelector("#p4 span").innerHTML = `No Precipitation`;
+  } else {
+    document.querySelector(
+      "#p4 span"
+    ).innerHTML = `${precipRate} inches per hour`;
+  }
 }
