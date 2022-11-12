@@ -34,13 +34,40 @@
 // This will go in model - need to protect the apiKey
 const apiKey = "24bf56ca08654dbfbf56ca0865adbf49";
 const apiUrl = `https://api.weather.com/v2/pws/observations/current?stationId=KALHARTS33&format=json&units=e&apiKey=${apiKey}&numericPrecision=decimal`;
+const jsonUrl = "./farmEvents.json";
 
 /************* Fetch API data *************
  * fetch returns string. json() method    *
  * resolves promise as JS object          *
  ******************************************/
+// need to turn this into function
+function getWeather(apiUrl) {
+  fetch(apiUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      } else {
+        return response.json();
+      }
+    })
+    .catch(function (error) {
+      console.log("Error: ", error);
+    })
+    .then((weather) => {
+      console.log(weather.observations);
+      console.log(weather.observations[0].imperial.temp);
+      console.log(weather.observations[0].imperial.windChill);
+      console.log(weather.observations[0].imperial.windSpeed);
+      console.log(weather.observations[0].imperial.windGust);
+      console.log(weather.observations[0].imperial.precipRate);
+    });
+}
+getWeather(apiUrl);
+// Now lets work on accessing local JW Farm JSON data
+// import events from "./farmEvent.json" assert { type: "JSON" };
+// console.log(events); //error
 
-fetch(apiUrl)
+fetch(jsonUrl)
   .then((response) => {
     if (!response.ok) {
       throw Error(response.statusText);
@@ -52,16 +79,8 @@ fetch(apiUrl)
     console.log("Error: ", error);
   })
   .then((obj) => {
-    console.log(obj.observations[0].imperial.temp);
-    console.log(obj.observations[0].imperial.windChill);
-    console.log(obj.observations[0].imperial.windSpeed);
-    console.log(obj.observations[0].imperial.windGust);
-    console.log(obj.observations[0].imperial.precipRate);
+    console.log(obj);
   });
-
-// Now lets work on accessing local JW Farm JSON data
-import events from "./farmEvent.json" assert { type: "JSON" };
-console.log(events); //error
 
 //This will go in controller
 // function showCurrent(apiUrl) {
@@ -72,3 +91,11 @@ console.log(events); //error
 //   });
 // }
 // showCurrent(apiUrl);
+
+//View
+//Get weather elements
+function renderWeather(weather) {
+  const p = document.createElement("p");
+  let temp = weather.observations[0].imperial.temp;
+  document.querySelector("p<span></span>").innerText = temp;
+}
