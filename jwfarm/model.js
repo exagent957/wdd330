@@ -21,21 +21,17 @@ function getWeather(apiUrl) {
     });
 }
 
-// Now lets work on accessing local JW Farm JSON data
-// import events from "./farmEvent.json" assert { type: "JSON" };
-// console.log(events); //error
-
-fetch(jsonUrl)
-  .then((response) => {
-    if (!response.ok) {
-      throw Error(response.statusText);
-    } else {
-      return response.json();
-    }
-  })
-  .catch(function (error) {
-    console.log("Error: ", error);
-  })
-  .then((obj) => {
-    console.log(obj);
-  });
+/************ Fetch Local JSON data ******/
+function getEvents(jsonUrl) {
+  return fetch(jsonUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      } else {
+        return response.json();
+      }
+    })
+    .catch(function (error) {
+      console.log("Error: ", error);
+    });
+}

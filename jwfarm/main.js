@@ -22,21 +22,19 @@ function getWeather(apiUrl) {
 }
 
 /************ Fetch Local JSON data ******/
-// Now lets work on accessing local JW Farm
-fetch(jsonUrl)
-  .then((response) => {
-    if (!response.ok) {
-      throw Error(response.statusText);
-    } else {
-      return response.json();
-    }
-  })
-  .catch(function (error) {
-    console.log("Error: ", error);
-  })
-  .then((obj) => {
-    console.log(obj);
-  });
+function getEvents(jsonUrl) {
+  return fetch(jsonUrl)
+    .then((response) => {
+      if (!response.ok) {
+        throw Error(response.statusText);
+      } else {
+        return response.json();
+      }
+    })
+    .catch(function (error) {
+      console.log("Error: ", error);
+    });
+}
 
 /***** CONTROLLER SECTION *****************/
 function showWeather(apiUrl) {
@@ -46,6 +44,13 @@ function showWeather(apiUrl) {
   });
 }
 showWeather(apiUrl);
+
+function showEvents(jsonUrl) {
+  getEvents(jsonUrl).then((events) => {
+    console.log(events);
+  });
+}
+showEvents(jsonUrl);
 
 /**** VIEW SECTION ********************************/
 //Get weather elements

@@ -6,3 +6,10 @@ function showWeather(apiUrl) {
   });
 }
 showWeather(apiUrl);
+
+function showEvents(jsonUrl) {
+  getEvents(jsonUrl).then((events) => {
+    console.log(events);
+  });
+}
+showEvents(jsonUrl);
