@@ -25,7 +25,7 @@ function renderList(list, element, tasks, unfiltered) {
       //true when Active filter button clicked
     } else if (!unfiltered && !task.completed) {
       li.innerHTML = `<label><input type="checkbox"> ${task.content}</label><button>X</button>`;
-      //true when Completed filter button clicked - BUG HERE -places no elements into document
+      //true when Completed filter button clicked
     } else if (!unfiltered && task.completed) {
       li.innerHTML = `<label><input type="checkbox" checked><s>${task.content}</s></label><button>X</button>`;
     }

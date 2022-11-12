@@ -1,6 +1,6 @@
-/**** VIEW SECTION ********************************/
-//Get weather elements
-function renderWeather(weather) {
+/**** VIEW MODULE ********************************/
+
+export function renderWeather(weather) {
   const parentDiv = document.querySelector("#weatherDiv");
   const p = document.createElement("p");
   const temp = weather.observations[0].imperial.temp;
