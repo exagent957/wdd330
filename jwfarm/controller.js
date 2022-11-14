@@ -17,11 +17,18 @@ showWeather(apiUrl);
 export function showEvents(jsonUrl) {
   getEvents(jsonUrl).then((events) => {
     console.log(events);
-    let today = new Date();
+    const today = new Date();
     console.log({ today });
+
     events.forEach((event) => {
       event.date = new Date(event.date);
     });
+
+    const today90 = new Date(today.setDate(today.getDate() + 90));
+    console.log(today90);
+
+    const eventList = events.filter((event) => event.date <= today90);
+    console.log({ eventList });
   });
 }
 showEvents(jsonUrl);
