@@ -1,80 +1,78 @@
-{
-  "events": [
-    {
-      "date": "12/15/2022",
-      "event": "Start bunching onions indoors from seed."
-    },
-    {
-      "date": "2/15/2023",
-      "event": "Start regular onions and celery indoors from seed."
-    },
-    {
-      "date": "2/20/2023",
-      "event": "Direct sow peas and beets."
-    },
-    {
-      "date": "2/25/2023",
-      "event": "Direct sow kale, spinach, and arugula."
-    },
-    {
-      "date": "3/1/2023",
-      "event": "Start cauliflower indoors."
-    },
-    {
-      "date": "3/5/2023",
-      "event": "Direct sow broccoli."
-    },
-    {
-      "date": "3/10/2023",
-      "event": "Direct sow carrots. Start brussels and cabbage indoors."
-    },
-    {
-      "date": "3/15/2023",
-      "event": "Start tomatoes indoors and direct sow lettuce."
-    },
-    {
-      "date": "4/1/2023",
-      "event": "Succession plant spinach, carrots, beets and arugula."
-    },
-    {
-      "date": "4/2/2023",
-      "event": "Start eggplant and peppers indoors."
-    },
-    {
-      "date": "4/3/2023",
-      "event": "Transplant cauliflower and onions."
-    },
-    {
-      "date": "4/15/2023",
-      "event": "LAST FROST DATE."
-    },
-    {
-      "date": "4/20/2023",
-      "event": "Transplant brussels, cabbage, celery."
-    },
-    {
-      "date": "4/21/2023",
-      "event": "Direct sow summer squash. Start melons indoors."
-    },
-    {
-      "date": "4/25/2023",
-      "event": "Succession plant lettuce. Transplant celery, tomatoes, melons."
-    },
-    {
-      "date": "5/1/2023",
-      "event": "Plant potatoes."
-    },
-    {
-      "date": "5/15/2023",
-      "event": "Direct sow cucumbers, corn, beans, winter squash, sweet potato slips."
-    },
-    {
-      "date": "10/15/2023",
-      "event": "FIRST FROST DATE."
-    },
-    {
-      "date": "12/1/2022",
-      "event": "Start bunching onions indoors for early Spring transplants."
-    }
-  ]
-}
+[
+  {
+    "date": "12/1/2022",
+    "event": "Start bunching onions indoors for early Spring transplants."
+  },
+  {
+    "date": "12/15/2022",
+    "event": "Start bunching onions indoors from seed."
+  },
+  {
+    "date": "2/15/2023",
+    "event": "Start regular onions and celery indoors from seed."
+  },
+  {
+    "date": "2/20/2023",
+    "event": "Direct sow peas and beets."
+  },
+  {
+    "date": "2/25/2023",
+    "event": "Direct sow kale, spinach, and arugula."
+  },
+  {
+    "date": "3/1/2023",
+    "event": "Start cauliflower indoors."
+  },
+  {
+    "date": "3/5/2023",
+    "event": "Direct sow broccoli."
+  },
+  {
+    "date": "3/10/2023",
+    "event": "Direct sow carrots. Start brussels and cabbage indoors."
+  },
+  {
+    "date": "3/15/2023",
+    "event": "Start tomatoes indoors and direct sow lettuce."
+  },
+  {
+    "date": "4/1/2023",
+    "event": "Succession plant spinach, carrots, beets and arugula."
+  },
+  {
+    "date": "4/2/2023",
+    "event": "Start eggplant and peppers indoors."
+  },
+  {
+    "date": "4/3/2023",
+    "event": "Transplant cauliflower and onions."
+  },
+  {
+    "date": "4/15/2023",
+    "event": "LAST FROST DATE."
+  },
+  {
+    "date": "4/20/2023",
+    "event": "Transplant brussels, cabbage, celery."
+  },
+  {
+    "date": "4/21/2023",
+    "event": "Direct sow summer squash. Start melons indoors."
+  },
+  {
+    "date": "4/25/2023",
+    "event": "Succession plant lettuce. Transplant celery, tomatoes, melons."
+  },
+  {
+    "date": "5/1/2023",
+    "event": "Plant potatoes."
+  },
+  {
+    "date": "5/15/2023",
+    "event": "Direct sow cucumbers, corn, beans, winter squash, sweet potato slips."
+  },
+  {
+    "date": "10/15/2023",
+    "event": "FIRST FROST DATE."
+  }
+]
