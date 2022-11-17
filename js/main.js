@@ -74,7 +74,7 @@ const weeklyLinks = [
   },
   {
     label: "Week 10 Team1 Exercise - Quakes",
-    url: "team1/team1w10/quakes.html",
+    url: "team1/team01w10/quakes.html",
   },
 ];
 //function call
