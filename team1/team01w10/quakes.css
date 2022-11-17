@@ -1,0 +1,75 @@
+h1 {
+    text-align: center;
+    padding: 10px;
+    background-color: olivedrab;
+    color: white;
+}
+
+button {
+    display: inline-block;
+    background-color: olivedrab;
+    border-radius: 10px;
+    border: 4px double #cccccc;
+    color: #eeeeee;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px 0px;
+  }
+  #mainNav {
+    list-style-type: none;
+    padding: 0px;
+  }
+
+  #mainNav li {
+    background-color: olive;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 15px;
+    width: 70%;
+  }
+
+  #mainNav li a {
+    color: white;
+    font-size: 20px;
+  }
+  #quakeList {
+    padding: 10px;
+  }
+  #quakeList li {
+    list-style-type: none;
+    border: 1px black solid;
+    padding: 10px;
+    margin: 10px;
+    font-size: 20px;
+
+  }
+
+  #quakeInfo {
+    border: 2px olivedrab solid;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 25px;
+  }
+
+  .property-label {
+    font-weight: bold;
+    background-color: olive;
+    color: white;
+    padding: 15px;
+
+  }
+  .rowInfo {
+    border: 1px olive solid;
+    margin: 20px 0px;
+    display: flex;
+  }
+
+  .infoResponse {
+    margin: auto;
+    text-align: center;
+  }

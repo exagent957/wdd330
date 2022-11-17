@@ -68,6 +68,14 @@ const weeklyLinks = [
     label: "Week 9 Team1 Exercise - Drumkit",
     url: "team1/team1w09/drumKit.html",
   },
+  {
+    label: "Week 10 Notes",
+    url: "w10/w10.html",
+  },
+  {
+    label: "Week 10 Team1 Exercise - Quakes",
+    url: "team1/team1w10/quakes.html",
+  },
 ];
 //function call
 listWeeklyItems(weeklyLinks, "weeklyList");
