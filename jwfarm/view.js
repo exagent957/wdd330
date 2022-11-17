@@ -1,8 +1,5 @@
-/**** VIEW MODULE ********************************/
-
+/***** Render Weather ******/
 export function renderWeather(weather) {
-  const parentDiv = document.querySelector("#weatherDiv");
-  const p = document.createElement("p");
   const temp = weather.observations[0].imperial.temp;
   const chill = weather.observations[0].imperial.windChill;
   const speed = weather.observations[0].imperial.windSpeed;
@@ -45,4 +42,16 @@ export function renderWeather(weather) {
       "#p4 span"
     ).innerHTML = `${precipRate} inches per hour`;
   }
+}
+
+/****** Render Events ******/
+export function renderEvents(eventsList) {
+  console.log(eventsList);
+  const eventsUl = document.querySelector("#eventsUl");
+  eventsList.forEach((event) => {
+    console.log(event);
+    const li = document.createElement("li");
+    li.innerHTML = `${event.date} - ${event.event}`;
+    eventsUl.appendChild(li);
+  });
 }
