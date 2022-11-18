@@ -46,10 +46,8 @@ export function renderWeather(weather) {
 
 /****** Render Events ******/
 export function renderEvents(eventsList) {
-  console.log(eventsList);
   const eventsUl = document.querySelector("#eventsUl");
   eventsList.forEach((event) => {
-    console.log(event);
     const li = document.createElement("li");
     li.innerHTML = `${event.date} - ${event.event}`;
     eventsUl.appendChild(li);

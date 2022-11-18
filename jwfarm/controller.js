@@ -27,20 +27,14 @@ export function showEvents(jsonUrl) {
     const today90 = new Date(today.setDate(today.getDate() + 90));
     const eventsList = events.filter((event) => event.date <= today90);
     console.log(eventsList);
-    //  pad2 = (datePart) => datePart.padStart(2, "0");
+
     eventsList.forEach((event) => {
-      console.log(event.date);
-
-      const day = event.date.getDate();
-      const month = event.date.getMonth() + 1;
-      const year = event.date.getFullYear();
-
-      const formattedDate = `${month}/${day}/${year}`;
-      event.date = formattedDate;
-      console.log(typeof formattedDate);
-      console.log(event.date);
+      event.date = event.date.toLocaleDateString("en-US", {
+        month: "2-digit",
+        day: "2-digit",
+        year: "numeric",
+      });
     });
-
     renderEvents(eventsList);
   });
 }
