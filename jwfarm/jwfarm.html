@@ -4,6 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Marc Williamson" />
+    <meta
+      name="description"
+      content="Worklog utility app for JW Farm Organic Vegetables"
+    />
+    <link rel="shortcut icon" href="images/favicon-traincar.ico" />
     <link rel="stylesheet" href="style.css" />
     <title>JW Farm</title>
   </head>
@@ -18,8 +24,20 @@
     </div>
     <h2>Important Farm Dates</h2>
     <ul id="eventsUl"></ul>
-    <h2>Work Log</h2>
-
+    <h2>Worklogs</h2>
+    <div id="worklogsConainer">
+      <ul id="worklogsList">
+        <li>test</li>
+      </ul>
+      <form id="worklogsForm" action="">
+        <input
+          id="newWorklogInput"
+          type="text"
+          placeholder="Create new worklog entry"
+        />
+        <button type="button" id="addNewWorklog">+</button>
+      </form>
+    </div>
     <script src="jwfarm.js" type="module"></script>
   </body>
 </html>

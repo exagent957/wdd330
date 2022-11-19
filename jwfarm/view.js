@@ -53,3 +53,5 @@ export function renderEvents(eventsList) {
     eventsUl.appendChild(li);
   });
 }
+
+/***** Render Worklogs ******/
