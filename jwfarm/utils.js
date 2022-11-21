@@ -13,7 +13,7 @@ export function setToLS(key, data) {
 }
 
 /****  Event listener to each li ******/
-export function bindClick(selector, callback) {
+export function bindAction(selector, callback) {
   const element = document.querySelector(selector);
   element.addEventListener("click", callback);
 }

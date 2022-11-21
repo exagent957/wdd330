@@ -1,12 +1,12 @@
 /***** CONTROLLER MODULE *****************/
 import { getJSON } from "./model.js";
-import { renderWeather, renderEvents } from "./view.js";
-import { getFromLS, setToLS, bindClick } from "./utils.js";
+import { renderWeather, renderEvents, renderWorklogs } from "./view.js";
+import { getFromLS, setToLS, bindAction } from "./utils.js";
 
 const apiKey = "24bf56ca08654dbfbf56ca0865adbf49";
 const apiUrl = `https://api.weather.com/v2/pws/observations/current?stationId=KALHARTS51&format=json&units=e&apiKey=${apiKey}&numericPrecision=decimal`;
 const localJSON = "./farmEvents.json";
-let storedWorklogs = [""];
+let storedWorklogs = null;
 
 /***** Weather Class ************************/
 export default class Weather {
@@ -55,25 +55,40 @@ farmEvents.showEvents();
 
 /***** Worklogs Class ***********************/
 class Worklogs {
-  #addNewWorklog(value, key) {
-    const newWorklog = { id: new Date(), content: "test value" };
+  //private methods
+  #addNewWorklog(date, value, key) {
+    const newWorklog = {
+      id: new Date(),
+      worklogDate: date,
+      content: value,
+    };
     console.log(newWorklog);
     storedWorklogs.push(newWorklog);
     setToLS(key, storedWorklogs);
   }
+  #getWorklogs(key) {
+    if (storedWorklogs === null) {
+      storedWorklogs = getFromLS(key) || [];
+    }
+    return storedWorklogs;
+  }
+  //constructor
   constructor(listElement, key) {
     this.listElement = listElement;
     this.key = key;
+    bindAction("#addNewWorklog", this.newWorklog.bind(this));
+    this.listWorklogs();
   }
   listWorklogs() {
-    renderWorklogs();
+    console.log("from listWorklogs");
+    renderWorklogs(this.#getWorklogs(this.key), this.listElement, this);
   }
   newWorklog() {
-    const worklog = document.querySelector("#newWorklogInput");
-    worklog.value = "this is a test string";
-    console.log(worklog.value);
-    this.#addNewWorklog(worklog.value, this.key);
-    worklog.value = "";
+    const worklogDate = document.querySelector("#newWorklogDate");
+    const worklogInput = document.querySelector("#newWorklogInput");
+    this.#addNewWorklog(worklogDate.value, worklogInput.value, this.key);
+    worklogDate.value = "";
+    worklogInput.value = "";
     // this.listWorklogs();
   }
   editWorklog() {
@@ -86,6 +101,6 @@ class Worklogs {
 const worklogsList = document.querySelector("#worklogsList");
 console.log(worklogsList);
 const farmWorklogs = new Worklogs(worklogsList, "worklogs");
-farmWorklogs.newWorklog();
+
 farmWorklogs.editWorklog();
 farmWorklogs.removeWorklog();

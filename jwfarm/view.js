@@ -55,3 +55,39 @@ export function renderEvents(eventsList) {
 }
 
 /***** Render Worklogs ******/
+//Render Entire List - called after every change
+export function renderWorklogs(list, element, worklogs) {
+  console.log(list);
+  console.log(element);
+  console.log(worklogs);
+  element.innerHTML = "";
+  list.forEach((worklog) => {
+    const li = document.createElement("li");
+    let buttonEdit = null;
+    let buttonRemove = null;
+    worklog.worklogDate = new Date(worklog.worklogDate).toLocaleString(
+      "en-US",
+      {
+        month: "2-digit",
+        day: "2-digit",
+        year: "numeric",
+        hour: "2-digit",
+        minute: "2-digit",
+      }
+    );
+    console.log(worklog.worklogDate);
+    li.innerHTML = `<label>${worklog.worklogDate}: ${worklog.content}</s></label><button>Edit</button><button>X</button>`;
+
+    buttonEdit = li.childNodes[0];
+    buttonRemove = li.childNodes[1];
+    if (buttonEdit) {
+      console.log("from buttonEdit");
+      // buttonEdit.addEventListener("click", function () {
+      //   worklogs.removeWorklog(worklog.id);
+    }
+    if (buttonRemove) {
+      console.log("from buttonRemove");
+    }
+    element.appendChild(li);
+  });
+}

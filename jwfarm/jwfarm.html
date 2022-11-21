@@ -22,7 +22,7 @@
       <p id="p3">Wind: <span>No data</span></p>
       <p id="p4">Precipitation: <span>No data</span></p>
     </div>
-    <h2>Important Farm Dates</h2>
+    <h2>Important Farm Dates - 90 day outlook</h2>
     <ul id="eventsUl"></ul>
     <h2>Worklogs</h2>
     <div id="worklogsConainer">
@@ -30,11 +30,16 @@
         <li>test</li>
       </ul>
       <form id="worklogsForm" action="">
-        <input
-          id="newWorklogInput"
-          type="text"
-          placeholder="Create new worklog entry"
-        />
+        <label for="newWorklogDate">
+          <input id="newWorklogDate" type="datetime-local" required
+        /></label>
+        <label for="newWorklogInput">
+          <input
+            id="newWorklogInput"
+            type="text"
+            placeholder="Create new worklog entry"
+            required
+        /></label>
         <button type="button" id="addNewWorklog">+</button>
       </form>
     </div>
