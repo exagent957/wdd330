@@ -75,18 +75,20 @@ export function renderWorklogs(list, element, worklogs) {
         minute: "2-digit",
       }
     );
-    console.log(worklog.worklogDate);
-    li.innerHTML = `<label>${worklog.worklogDate}: ${worklog.content}</s></label><button>Edit</button><button>X</button>`;
+    li.innerHTML = `<label>${worklog.worklogDate}: ${worklog.content}</label><button id="buttonEdit">Edit</button><button id="buttonRemove">X</button>`;
 
-    buttonEdit = li.childNodes[0];
-    buttonRemove = li.childNodes[1];
+    buttonEdit = li.childNodes[1];
+    buttonRemove = li.childNodes[2];
     if (buttonEdit) {
-      console.log("from buttonEdit");
-      // buttonEdit.addEventListener("click", function () {
-      //   worklogs.removeWorklog(worklog.id);
+      buttonEdit.addEventListener("click", () => {
+        console.log("from buttonEdit");
+        //   worklogs.editWorklog(worklog.id);
+      });
     }
     if (buttonRemove) {
-      console.log("from buttonRemove");
+      buttonRemove.addEventListener("click", () => {
+        worklogs.removeWorklog(worklog.id);
+      });
     }
     element.appendChild(li);
   });

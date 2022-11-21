@@ -72,6 +72,11 @@ class Worklogs {
     }
     return storedWorklogs;
   }
+  #deleteWorklog(key, listKey) {
+    let newList = storedWorklogs.filter((li) => li.id != key);
+    storedWorklogs = newList;
+    setToLS(listKey, storedWorklogs);
+  }
   //constructor
   constructor(listElement, key) {
     this.listElement = listElement;
@@ -79,9 +84,15 @@ class Worklogs {
     bindAction("#addNewWorklog", this.newWorklog.bind(this));
     this.listWorklogs();
   }
+  //public methods
   listWorklogs() {
-    console.log("from listWorklogs");
     renderWorklogs(this.#getWorklogs(this.key), this.listElement, this);
+  }
+  findWorklog(id) {
+    let worklog = storedWorklogs.find((element) => {
+      return element.id === id;
+    });
+    return worklog;
   }
   newWorklog() {
     const worklogDate = document.querySelector("#newWorklogDate");
@@ -89,18 +100,23 @@ class Worklogs {
     this.#addNewWorklog(worklogDate.value, worklogInput.value, this.key);
     worklogDate.value = "";
     worklogInput.value = "";
-    // this.listWorklogs();
+    this.listWorklogs();
   }
   editWorklog() {
     console.log("from editWorklog");
   }
-  removeWorklog() {
-    console.log("from removeWorklog");
+  removeWorklog(id) {
+    console.log(id + " worklog removed");
+    let worklog = this.findWorklog(id);
+    if (worklog) {
+      this.#deleteWorklog(id, this.key);
+      renderWorklogs(storedWorklogs, this.listElement, this);
+    }
   }
 }
 const worklogsList = document.querySelector("#worklogsList");
 console.log(worklogsList);
-const farmWorklogs = new Worklogs(worklogsList, "worklogs");
 
+const farmWorklogs = new Worklogs(worklogsList, "worklogs");
 farmWorklogs.editWorklog();
 farmWorklogs.removeWorklog();
