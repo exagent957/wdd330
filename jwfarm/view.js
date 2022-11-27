@@ -64,6 +64,7 @@ export function renderWorklogs(list, element, worklogs) {
   list.forEach((worklog) => {
     const li = document.createElement("li");
     let buttonEdit = null;
+    let buttonSave = null;
     let buttonRemove = null;
     worklog.worklogDate = new Date(worklog.worklogDate).toLocaleString(
       "en-US",
@@ -75,14 +76,20 @@ export function renderWorklogs(list, element, worklogs) {
         minute: "2-digit",
       }
     );
-    li.innerHTML = `<label>${worklog.worklogDate}: ${worklog.content}</label><button id="buttonEdit">Edit</button><button id="buttonRemove">X</button>`;
+    li.innerHTML = `<label>${worklog.worklogDate}: ${worklog.content}</label><button id="buttonEdit">Edit</button><button id="buttonSave">Save</button><button id="buttonRemove">X</button>`;
 
     buttonEdit = li.childNodes[1];
-    buttonRemove = li.childNodes[2];
+    buttonSave = li.childNodes[2];
+    buttonRemove = li.childNodes[3];
+    buttonSave.style.display = "none";
     if (buttonEdit) {
       buttonEdit.addEventListener("click", () => {
-        console.log("from buttonEdit");
-        //   worklogs.editWorklog(worklog.id);
+        buttonEdit.style.display = "none";
+        buttonSave.style.display = "inline-block";
+        li.childNodes[0].setAttribute("contenteditable", "true");
+        li.childNodes[0].focus();
+
+        // worklogs.editWorklog(worklog.id);
       });
     }
     if (buttonRemove) {

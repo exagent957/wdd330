@@ -53,13 +53,6 @@
       "userId": "user1@email.com",
       "createdAt": 1559159640285,
       "id": 12
-    },
-    {
-      "title": "ddd",
-      "content": "post 7",
-      "userId": "user1@email.com",
-      "createdAt": 1669359843167,
-      "id": 13
     }
   ]
 }

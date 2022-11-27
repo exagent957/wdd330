@@ -102,7 +102,7 @@ class Worklogs {
     worklogInput.value = "";
     this.listWorklogs();
   }
-  editWorklog() {
+  editWorklog(id) {
     console.log("from editWorklog");
   }
   removeWorklog(id) {
@@ -118,5 +118,3 @@ const worklogsList = document.querySelector("#worklogsList");
 console.log(worklogsList);
 
 const farmWorklogs = new Worklogs(worklogsList, "worklogs");
-farmWorklogs.editWorklog();
-farmWorklogs.removeWorklog();
