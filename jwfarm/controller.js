@@ -77,8 +77,14 @@ class Worklogs {
     storedWorklogs = newList;
     setToLS(listKey, storedWorklogs);
   }
-  #editWorklog() {
-    console.log("from #editWorklog");
+  #editWorklog(updatedDate, updatedContent, key) {
+    const updatedWorklog = {
+      id: new Date(),
+      worklogDate: updatedDate,
+      content: updatedContent,
+    };
+    storedWorklogs.push(updatedWorklog);
+    setToLS(key, storedWorklogs);
   }
   //constructor
   constructor(listElement, key) {
@@ -105,10 +111,14 @@ class Worklogs {
     worklogInput.value = "";
     this.listWorklogs();
   }
-  updateWorklog(id) {
-    console.log(`${id} from updateWorklog`);
+  updateWorklog(id, updatedDate, updatedContent) {
+    console.log(`${id} ${updatedDate} ${updatedContent} from updateWorklog`);
     let worklog = this.findWorklog(id);
-    this.#editWorklog();
+    if (worklog) {
+      this.#deleteWorklog(id, this.key);
+    }
+    this.#editWorklog(updatedDate, updatedContent, this.key);
+    this.listWorklogs();
   }
   removeWorklog(id) {
     console.log(id + " worklog removed");
@@ -120,6 +130,4 @@ class Worklogs {
   }
 }
 const worklogsList = document.querySelector("#worklogsList");
-console.log(worklogsList);
-
 const farmWorklogs = new Worklogs(worklogsList, "worklogs");

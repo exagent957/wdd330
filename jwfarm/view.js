@@ -58,8 +58,6 @@ export function renderEvents(eventsList) {
 //Render Entire List - called after every change
 export function renderWorklogs(list, element, worklogs) {
   console.log(list);
-  console.log(element);
-  console.log(worklogs);
   element.innerHTML = "";
   list.forEach((worklog) => {
     const li = document.createElement("li");
@@ -97,7 +95,9 @@ export function renderWorklogs(list, element, worklogs) {
         buttonSave.style.display = "none";
         li.childNodes[0].setAttribute("contenteditable", "false");
         li.childNodes[1].setAttribute("contenteditable", "false");
-        worklogs.updateWorklog(worklog.id);
+        let updatedDate = li.childNodes[0].innerText;
+        let updatedContent = li.childNodes[1].innerText;
+        worklogs.updateWorklog(worklog.id, updatedDate, updatedContent);
       });
     }
     if (buttonRemove) {
