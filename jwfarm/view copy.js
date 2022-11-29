@@ -66,6 +66,8 @@ export function renderWorklogs(list, element, worklogs) {
     let buttonEdit = null;
     let buttonSave = null;
     let buttonRemove = null;
+    let updatedDate = "";
+    let updatedContent = "";
     worklog.worklogDate = new Date(worklog.worklogDate).toLocaleString(
       "en-US",
       {
@@ -76,6 +78,7 @@ export function renderWorklogs(list, element, worklogs) {
         minute: "2-digit",
       }
     );
+    // li.innerHTML = `<label><span id="worklogDate">${worklog.worklogDate}</span><span id="content">${worklog.content}</span></label><button id="buttonEdit">Edit</button><button id="buttonSave">Save</button><button id="buttonRemove">X</button>`;
     li.innerHTML = `<label id="worklogDate">${worklog.worklogDate}</label><label id="content">${worklog.content}</label><button id="buttonEdit">Edit</button><button id="buttonSave">Save</button><button id="buttonRemove">X</button>`;
 
     buttonEdit = li.childNodes[2];
@@ -87,17 +90,19 @@ export function renderWorklogs(list, element, worklogs) {
         buttonEdit.style.display = "none";
         buttonSave.style.display = "inline-block";
         li.childNodes[0].setAttribute("contenteditable", "true");
-        li.childNodes[0].focus();
         li.childNodes[1].setAttribute("contenteditable", "true");
-      });
-    }
-    if (buttonSave) {
-      buttonSave.addEventListener("click", () => {
-        buttonEdit.style.display = "inline-block";
-        buttonSave.style.display = "none";
-        li.childNodes[0].setAttribute("contenteditable", "false");
-        li.childNodes[1].setAttribute("contenteditable", "false");
-        worklogs.updateWorklog(worklog.id);
+        li.childNodes[0].focus();
+        if (buttonSave) {
+          buttonSave.addEventListener("click", () => {
+            buttonEdit.style.display = "inline-block";
+            buttonSave.style.display = "none";
+            li.childNodes[0].setAttribute("contenteditable", "false");
+            li.childNodes[1].setAttribute("contenteditable", "false");
+            updatedDate = li.childNodes[0].innerText;
+            updatedContent = li.childNodes[1].innerText;
+            //  worklogs.updateWorklog(worklog.id, updatedDate, updatedContent);
+          });
+        }
       });
     }
     if (buttonRemove) {

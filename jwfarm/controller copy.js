@@ -62,7 +62,7 @@ class Worklogs {
       worklogDate: date,
       content: value,
     };
-    console.log(newWorklog);
+    console.log(`Added: ${newWorklog}`);
     storedWorklogs.push(newWorklog);
     setToLS(key, storedWorklogs);
   }
@@ -77,9 +77,10 @@ class Worklogs {
     storedWorklogs = newList;
     setToLS(listKey, storedWorklogs);
   }
-  #editWorklog() {
-    console.log("from #editWorklog");
-  }
+  // #editWorklog(key, listKey) {
+  //   console.log("from #editWorklog");
+  //   setToLS(key, listKey);
+  // }
   //constructor
   constructor(listElement, key) {
     this.listElement = listElement;
@@ -105,10 +106,12 @@ class Worklogs {
     worklogInput.value = "";
     this.listWorklogs();
   }
-  updateWorklog(id) {
-    console.log(`${id} from updateWorklog`);
+  updateWorklog(id, updatedDate, updatedContent) {
     let worklog = this.findWorklog(id);
-    this.#editWorklog();
+    worklog.worklogDate = updatedDate;
+    worklog.content = updatedContent;
+    //this.#editWorklog(this.key, worklog);
+    //renderWorklogs(storedWorklogs, this.listElement, this);
   }
   removeWorklog(id) {
     console.log(id + " worklog removed");
