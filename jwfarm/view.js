@@ -55,8 +55,18 @@ export function renderEvents(eventsList) {
 }
 
 /***** Render Worklogs ******/
-//Render Entire List - called after every change
 export function renderWorklogs(list, element, worklogs) {
+  list.sort((a, b) => {
+    let da = a.worklogDate.toUpperCase(),
+      db = b.worklogDate.toUpperCase();
+    if (da < db) {
+      return -1;
+    }
+    if (da > db) {
+      return 1;
+    }
+    return 0;
+  });
   console.log(list);
   element.innerHTML = "";
   list.forEach((worklog) => {

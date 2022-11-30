@@ -12,7 +12,7 @@ export function setToLS(key, data) {
   localStorage.setItem(key, JSON.stringify(data));
 }
 
-/****  Event listener to each li ******/
+/****  Event listener  ******/
 export function bindAction(selector, callback) {
   const element = document.querySelector(selector);
   element.addEventListener("click", callback);

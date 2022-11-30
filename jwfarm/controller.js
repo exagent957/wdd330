@@ -57,13 +57,30 @@ farmEvents.showEvents();
 class Worklogs {
   //private methods
   #addNewWorklog(date, value, key) {
+    date = new Date(date).toLocaleString("en-US", {
+      month: "2-digit",
+      day: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
     const newWorklog = {
       id: new Date(),
       worklogDate: date,
       content: value,
     };
-    console.log(newWorklog);
     storedWorklogs.push(newWorklog);
+    storedWorklogs.sort((a, b) => {
+      let da = a.worklogDate.toUpperCase(),
+        db = b.worklogDate.toUpperCase();
+      if (da < db) {
+        return -1;
+      }
+      if (da > db) {
+        return 1;
+      }
+      return 0;
+    });
     setToLS(key, storedWorklogs);
   }
   #getWorklogs(key) {
