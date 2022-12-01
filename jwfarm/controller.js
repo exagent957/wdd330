@@ -69,7 +69,7 @@ class Worklogs {
       worklogDate: date,
       content: value,
     };
-    if (content) {
+    if (!content) {
       console.log("No content");
     }
     storedWorklogs.push(newWorklog);
