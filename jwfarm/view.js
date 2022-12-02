@@ -57,8 +57,8 @@ export function renderEvents(eventsList) {
 /***** Render Worklogs ******/
 export function renderWorklogs(list, element, worklogs) {
   list.sort((a, b) => {
-    let da = a.worklogDate.toUpperCase(),
-      db = b.worklogDate.toUpperCase();
+    let da = new Date(a.worklogDate),
+      db = new Date(b.worklogDate);
     if (da < db) {
       return -1;
     }
@@ -123,39 +123,73 @@ export function renderWorklogs(list, element, worklogs) {
 const hideOutlook = document.querySelector("#hideOutlook");
 const showOutlook = document.querySelector("#showOutlook");
 const eventsUl = document.querySelector("#eventsUl");
-hideOutlook.addEventListener("click", () => {
-  hideOutlook.classList.remove("active");
-  hideOutlook.classList.add("hidden");
-  eventsUl.classList.remove("active");
-  eventsUl.classList.add("hidden");
-  showOutlook.classList.remove("hidden");
-  showOutlook.classList.add("active");
-});
-showOutlook.addEventListener("click", () => {
-  showOutlook.classList.remove("active");
-  showOutlook.classList.add("hidden");
-  eventsUl.classList.remove("hidden");
-  eventsUl.classList.add("active");
-  hideOutlook.classList.remove("hidden");
-  hideOutlook.classList.add("active");
-});
+if (hideOutlook) {
+  hideOutlook.addEventListener("click", () => {
+    hideOutlook.classList.remove("active");
+    hideOutlook.classList.add("hidden");
+    eventsUl.classList.remove("active");
+    eventsUl.classList.add("hidden");
+    showOutlook.classList.remove("hidden");
+    showOutlook.classList.add("active");
+  });
+  showOutlook.addEventListener("click", () => {
+    showOutlook.classList.remove("active");
+    showOutlook.classList.add("hidden");
+    eventsUl.classList.remove("hidden");
+    eventsUl.classList.add("active");
+    hideOutlook.classList.remove("hidden");
+    hideOutlook.classList.add("active");
+  });
+  hideOutlook.addEventListener("touchend", () => {
+    hideOutlook.classList.remove("active");
+    hideOutlook.classList.add("hidden");
+    eventsUl.classList.remove("active");
+    eventsUl.classList.add("hidden");
+    showOutlook.classList.remove("hidden");
+    showOutlook.classList.add("active");
+  });
+  showOutlook.addEventListener("touchend", () => {
+    showOutlook.classList.remove("active");
+    showOutlook.classList.add("hidden");
+    eventsUl.classList.remove("hidden");
+    eventsUl.classList.add("active");
+    hideOutlook.classList.remove("hidden");
+    hideOutlook.classList.add("active");
+  });
 
-const hideLogs = document.querySelector("#hideLogs");
-const showLogs = document.querySelector("#showLogs");
-const worklogsContainer = document.querySelector("#worklogsContainer");
-hideLogs.addEventListener("click", () => {
-  hideLogs.classList.remove("active");
-  hideLogs.classList.add("hidden");
-  worklogsContainer.classList.remove("active");
-  worklogsContainer.classList.add("hidden");
-  showLogs.classList.remove("hidden");
-  showLogs.classList.add("active");
-});
-showLogs.addEventListener("click", () => {
-  showLogs.classList.remove("active");
-  showLogs.classList.add("hidden");
-  worklogsContainer.classList.remove("hidden");
-  worklogsContainer.classList.add("active");
-  hideLogs.classList.remove("hidden");
-  hideLogs.classList.add("active");
-});
+  const hideLogs = document.querySelector("#hideLogs");
+  const showLogs = document.querySelector("#showLogs");
+  const worklogsContainer = document.querySelector("#worklogsContainer");
+  hideLogs.addEventListener("click", () => {
+    hideLogs.classList.remove("active");
+    hideLogs.classList.add("hidden");
+    worklogsContainer.classList.remove("active");
+    worklogsContainer.classList.add("hidden");
+    showLogs.classList.remove("hidden");
+    showLogs.classList.add("active");
+  });
+  showLogs.addEventListener("click", () => {
+    showLogs.classList.remove("active");
+    showLogs.classList.add("hidden");
+    worklogsContainer.classList.remove("hidden");
+    worklogsContainer.classList.add("active");
+    hideLogs.classList.remove("hidden");
+    hideLogs.classList.add("active");
+  });
+  hideLogs.addEventListener("touchend", () => {
+    hideLogs.classList.remove("active");
+    hideLogs.classList.add("hidden");
+    worklogsContainer.classList.remove("active");
+    worklogsContainer.classList.add("hidden");
+    showLogs.classList.remove("hidden");
+    showLogs.classList.add("active");
+  });
+  showLogs.addEventListener("touchend", () => {
+    showLogs.classList.remove("active");
+    showLogs.classList.add("hidden");
+    worklogsContainer.classList.remove("hidden");
+    worklogsContainer.classList.add("active");
+    hideLogs.classList.remove("hidden");
+    hideLogs.classList.add("active");
+  });
+}

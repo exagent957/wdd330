@@ -16,4 +16,5 @@ export function setToLS(key, data) {
 export function bindAction(selector, callback) {
   const element = document.querySelector(selector);
   element.addEventListener("click", callback);
+  element.addEventListener("touchend", callback);
 }
