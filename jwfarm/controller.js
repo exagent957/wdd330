@@ -62,9 +62,7 @@ class Worklogs {
       worklogDate: date,
       content: value,
     };
-    if (!content) {
-      console.log("No content");
-    }
+
     storedWorklogs.push(newWorklog);
     storedWorklogs.sort((a, b) => {
       let da = a.worklogDate;
