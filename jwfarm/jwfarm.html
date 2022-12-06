@@ -13,20 +13,32 @@
     <link rel="stylesheet" href="style.css" />
     <title>JW Farm</title>
   </head>
+  <script>
+    inputDateOnFocus = (x) => {
+      x.value = `${new Date().toISOString().substr(0, 11)}${new Date()
+        .toLocaleTimeString("it-IT")
+        .substr(0, 5)}`;
+    };
+
+    inputDateOnFocusOut = (x) => {
+      const dateRegExp =
+        /^(19|20)\d\d-[0|1]\d-([0-2]\d|[3][0|1])T[0|1]\d:[0-5]\d$/;
+      console.log(x.value);
+      console.log(dateRegExp.test(x.value));
+    };
+  </script>
   <body>
-    <h1>JW Farm Organic Vegetables</h1>
-    <h2>Current Weather @ JW Farm</h2>
+    <h1>JW Farm</h1>
+    <h2>Organic Vegetables, Hartselle, AL</h2>
+    <h3>Current Weather @ JW Farm</h3>
     <div id="weatherDiv">
       <p id="p1">Temp: <span>No data</span></p>
       <p id="p2">Feels Like: <span>No data</span></p>
       <p id="p3">Wind: <span>No data</span></p>
       <p id="p4">Precipitation: <span>No data</span></p>
     </div>
-    <h2>
-      Important Farm Dates - 90 day outlook<button
-        id="hideOutlook"
-        class="active"
-      >
+    <h3>
+      90-Day Outlook<button id="hideOutlook" class="active">
         <img
           src="./images/icons8-chevron-up-48.png"
           alt="upward chevron"
@@ -34,9 +46,9 @@
       ><button id="showOutlook" class="hidden">
         <img src="./images/icons8-chevron-down-48.png" alt="downward chevron" />
       </button>
-    </h2>
+    </h3>
     <ul id="eventsUl" class="active"></ul>
-    <h2>
+    <h3>
       Worklogs<button id="hideLogs" class="active">
         <img
           src="./images/icons8-chevron-up-48.png"
@@ -45,23 +57,35 @@
       ><button id="showLogs" class="hidden">
         <img src="./images/icons8-chevron-down-48.png" alt="downward chevron" />
       </button>
-    </h2>
+    </h3>
     <div id="worklogsContainer" class="active">
       <ul id="worklogsList">
         <li>Add a new worklog entry below</li>
       </ul>
       <form id="worklogsForm" action="">
-        <label for="newWorklogDate">
-          <input id="newWorklogDate" type="datetime-local" required
-        /></label>
-        <label for="newWorklogInput">
+        <label for="newWorklogDate"
+          >Enter as mm/dd/yyyy hh:mm AM or PM
+          <input
+            id="newWorklogDate"
+            type="datetime-local"
+            required
+            maxlength="19"
+            onfocus="inputDateOnFocus(this)"
+            onfocusout="inputDateOnFocusOut(this)"
+          />
+          <span class="error" aria-live="polite"></span>
+        </label>
+        <label for="newWorklogInput"
+          >Provide a brief description of work done.
           <input
             id="newWorklogInput"
             type="text"
             placeholder="Create new worklog entry"
             required
         /></label>
-        <button type="button" id="addNewWorklog">+</button>
+        <button type="button" id="addNewWorklog" type="submit">
+          Add entry to Worklog List
+        </button>
       </form>
     </div>
     <script src="jwfarm.js" type="module"></script>

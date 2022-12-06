@@ -1,6 +1,20 @@
-#p1 {
-  border-color: red;
-  font-weight: 900;
+:root {
+  font-size: 14px;
+}
+body {
+  background-color: rgb(210, 244, 255);
+  font: 1em sans-serif;
+  width: 350px;
+  padding: 0;
+  margin: 0 auto;
+}
+h1,
+h2,
+h3 {
+  font-family: "Times New Roman", Times, serif;
+}
+#weatherDiv {
+  line-height: 0.5em;
 }
 #p1 span {
   color: blue;
@@ -10,4 +24,43 @@
 }
 .hidden {
   display: none;
+}
+ul#eventsUl {
+  margin-top: -1.5em;
+}
+ul {
+  font-size: 0.9em;
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style-type: none;
+  line-height: 1.2em;
+}
+input {
+  width: 100%;
+  border: 1px solid #333;
+  margin: 0;
+  font-family: inherit;
+  font-size: 90%;
+  box-sizing: border-box;
+}
+input:valid {
+}
+input:invalid {
+  border-color: #900;
+  background-color: #fdd;
+  box-shadow: 0 0 5px 1px red;
+}
+input:focus:invalid {
+  box-shadow: none;
+}
+input:required {
+  background-color: rgba(188, 228, 253, 0.999);
+}
+button#addNewWorklog {
+  width: 100%;
+  margin-top: 0.75em;
+  margin-bottom: 0.75em;
+  border-style: ridge;
 }
