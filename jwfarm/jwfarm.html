@@ -37,8 +37,9 @@
       <p id="p3">Wind: <span>No data</span></p>
       <p id="p4">Precipitation: <span>No data</span></p>
     </div>
-    <h3>
-      90-Day Outlook<button id="hideOutlook" class="active">
+    <div class="h3">
+      <h3>90-Day Outlook</h3>
+      <button id="hideOutlook" class="active">
         <img
           src="./images/icons8-chevron-up-48.png"
           alt="upward chevron"
@@ -46,10 +47,11 @@
       ><button id="showOutlook" class="hidden">
         <img src="./images/icons8-chevron-down-48.png" alt="downward chevron" />
       </button>
-    </h3>
+    </div>
     <ul id="eventsUl" class="active"></ul>
-    <h3>
-      Worklogs<button id="hideLogs" class="active">
+    <div class="h3">
+      <h3>Worklogs</h3>
+      <button id="hideLogs" class="active">
         <img
           src="./images/icons8-chevron-up-48.png"
           alt="upward chevron"
@@ -57,14 +59,14 @@
       ><button id="showLogs" class="hidden">
         <img src="./images/icons8-chevron-down-48.png" alt="downward chevron" />
       </button>
-    </h3>
+    </div>
     <div id="worklogsContainer" class="active">
       <ul id="worklogsList">
         <li>Add a new worklog entry below</li>
       </ul>
       <form id="worklogsForm" action="">
         <label for="newWorklogDate"
-          >Enter as mm/dd/yyyy hh:mm AM or PM
+          >Enter as mm/dd/yyyy hh:mm AM or PM (required)
           <input
             id="newWorklogDate"
             type="datetime-local"
@@ -76,13 +78,15 @@
           <span class="error" aria-live="polite"></span>
         </label>
         <label for="newWorklogInput"
-          >Provide a brief description of work done.
+          >Provide a brief description of work done. (required)
           <input
             id="newWorklogInput"
             type="text"
             placeholder="Create new worklog entry"
             required
-        /></label>
+          />
+          <span class="error" aria-live="polite"></span>
+        </label>
         <button type="button" id="addNewWorklog" type="submit">
           Add entry to Worklog List
         </button>
