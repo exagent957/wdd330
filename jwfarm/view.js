@@ -84,7 +84,7 @@ export function renderWorklogs(list, element, worklogs) {
         minute: "2-digit",
       }
     );
-    // li.innerHTML = `<label id="worklogDate">${worklog.worklogDate}</label><label id="content">${worklog.content}</label><button id="buttonEdit">Edit</button><button id="buttonSave">Save</button><button id="buttonRemove">X</button>`;
+
     li.innerHTML = `<button>X</button><label>${worklog.worklogDate}</label><label>${worklog.content}</label><button>Edit</button><button>Save</button>`;
 
     buttonEdit = li.childNodes[3];
