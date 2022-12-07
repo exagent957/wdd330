@@ -84,29 +84,30 @@ export function renderWorklogs(list, element, worklogs) {
         minute: "2-digit",
       }
     );
-    li.innerHTML = `<label id="worklogDate">${worklog.worklogDate}</label><label id="content">${worklog.content}</label><button id="buttonEdit">Edit</button><button id="buttonSave">Save</button><button id="buttonRemove">X</button>`;
+    // li.innerHTML = `<label id="worklogDate">${worklog.worklogDate}</label><label id="content">${worklog.content}</label><button id="buttonEdit">Edit</button><button id="buttonSave">Save</button><button id="buttonRemove">X</button>`;
+    li.innerHTML = `<button>X</button><label>${worklog.worklogDate}</label><label>${worklog.content}</label><button>Edit</button><button>Save</button>`;
 
-    buttonEdit = li.childNodes[2];
-    buttonSave = li.childNodes[3];
-    buttonRemove = li.childNodes[4];
+    buttonEdit = li.childNodes[3];
+    buttonSave = li.childNodes[4];
+    buttonRemove = li.childNodes[0];
     buttonSave.style.display = "none";
     if (buttonEdit) {
       buttonEdit.addEventListener("click", () => {
         buttonEdit.style.display = "none";
         buttonSave.style.display = "inline-block";
-        li.childNodes[0].setAttribute("contenteditable", "true");
-        li.childNodes[0].focus();
         li.childNodes[1].setAttribute("contenteditable", "true");
+        li.childNodes[1].focus();
+        li.childNodes[2].setAttribute("contenteditable", "true");
       });
     }
     if (buttonSave) {
       buttonSave.addEventListener("click", () => {
         buttonEdit.style.display = "inline-block";
         buttonSave.style.display = "none";
-        li.childNodes[0].setAttribute("contenteditable", "false");
         li.childNodes[1].setAttribute("contenteditable", "false");
-        let updatedDate = li.childNodes[0].innerText;
-        let updatedContent = li.childNodes[1].innerText;
+        li.childNodes[2].setAttribute("contenteditable", "false");
+        let updatedDate = li.childNodes[1].innerText;
+        let updatedContent = li.childNodes[2].innerText;
         worklogs.updateWorklog(worklog.id, updatedDate, updatedContent);
       });
     }

@@ -47,6 +47,7 @@ div.h3 button {
 button {
   border-style: ridge;
   background-color: rgba(227, 240, 248, 0.999);
+  height: 1.8em;
 }
 img {
   background-color: rgb(91, 138, 41);
@@ -101,9 +102,9 @@ ul#eventsUl {
 }
 ul#worklogsList li {
   display: grid;
-  grid-template-columns: 3.8fr 4fr 1fr 1fr;
+  grid-template-columns: 0.5fr 3.8fr 4fr 1fr;
   justify-items: start;
-  align-items: start;
+  align-items: center;
 }
 label {
   font-weight: 700;
@@ -153,5 +154,5 @@ button#addNewWorklog {
   width: 100%;
   margin-top: 0.75em;
   margin-bottom: 0.75em;
-  padding: 1em;
+  padding: 1.75em;
 }
