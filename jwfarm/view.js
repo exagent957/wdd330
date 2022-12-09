@@ -110,7 +110,14 @@ export function renderWorklogs(list, element, worklogs) {
         if (elementDate.className === "invalid") {
           return;
         }
+        let elementContent = li.childNodes[2];
         let updatedContent = li.childNodes[2].innerText;
+        console.log({ elementContent });
+        elementContent = handleUpdatedContent(elementContent);
+        console.log({ elementContent });
+        if (elementContent.className === "invalid") {
+          return;
+        }
         buttonEdit.style.display = "inline-block";
         buttonSave.style.display = "none";
         li.childNodes[1].setAttribute("contenteditable", "false");
