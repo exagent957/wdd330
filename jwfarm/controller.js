@@ -117,6 +117,10 @@ class Worklogs {
   newWorklog() {
     const worklogDate = document.querySelector("#newWorklogDate");
     const worklogInput = document.querySelector("#newWorklogInput");
+
+    if ((worklogDate.classList = "invalid")) {
+      console.log("trying to prevent submit");
+    }
     this.#addNewWorklog(worklogDate.value, worklogInput.value, this.key);
     worklogDate.value = "";
     worklogInput.value = "";

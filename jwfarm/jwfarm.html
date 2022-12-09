@@ -13,20 +13,6 @@
     <link rel="stylesheet" href="style.css" />
     <title>JW Farm</title>
   </head>
-  <script>
-    inputDateOnFocus = (x) => {
-      x.value = `${new Date().toISOString().substr(0, 11)}${new Date()
-        .toLocaleTimeString("it-IT")
-        .substr(0, 5)}`;
-    };
-
-    inputDateOnFocusOut = (x) => {
-      const dateRegExp =
-        /^(19|20)\d\d-[0|1]\d-([0-2]\d|[3][0|1])T[0|1]\d:[0-5]\d$/;
-      console.log(x.value);
-      console.log(dateRegExp.test(x.value));
-    };
-  </script>
   <body>
     <h1>JW Farm</h1>
     <h2>Organic Vegetables, Hartselle, AL</h2>
@@ -64,16 +50,17 @@
       <ul id="worklogsList">
         <li>Add a new worklog entry below</li>
       </ul>
-      <form id="worklogsForm" action="">
+      <form id="worklogsForm" method="get" action="">
         <label for="newWorklogDate"
           >Enter as mm/dd/yyyy hh:mm AM or PM (required)
           <input
             id="newWorklogDate"
             type="datetime-local"
             required
-            maxlength="19"
+            minlength="16"
+            maxlength="16"
             onfocus="inputDateOnFocus(this)"
-            onfocusout="inputDateOnFocusOut(this)"
+            onfocusout="handleInputDate()"
           />
           <span class="error" aria-live="polite"></span>
         </label>
@@ -93,5 +80,6 @@
       </form>
     </div>
     <script src="jwfarm.js" type="module"></script>
+    <script src="validate.js"></script>
   </body>
 </html>
