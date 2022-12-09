@@ -119,7 +119,11 @@ class Worklogs {
   newWorklog() {
     const worklogDate = document.querySelector("#newWorklogDate");
     const worklogInput = document.querySelector("#newWorklogInput");
-    if (worklogDate.className === "invalid") {
+    if (
+      worklogDate.className === "invalid" ||
+      worklogDate.value === "" ||
+      worklogInput.value === ""
+    ) {
       return;
     }
     this.#addNewWorklog(worklogDate.value, worklogInput.value, this.key);
