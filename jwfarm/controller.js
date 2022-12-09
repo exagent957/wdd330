@@ -37,7 +37,9 @@ class Events {
         event.date = new Date(event.date);
       });
       const today90 = new Date(today.setDate(today.getDate() + 90));
-      const eventsList = events.filter((event) => event.date <= today90);
+      const eventsList = events.filter((event) => {
+        return event.date <= today90;
+      });
       console.log(eventsList);
       eventsList.forEach((event) => {
         event.date = event.date.toLocaleDateString("en-US", {
@@ -117,9 +119,8 @@ class Worklogs {
   newWorklog() {
     const worklogDate = document.querySelector("#newWorklogDate");
     const worklogInput = document.querySelector("#newWorklogInput");
-
-    if ((worklogDate.classList = "invalid")) {
-      console.log("trying to prevent submit");
+    if (worklogDate.className === "invalid") {
+      return;
     }
     this.#addNewWorklog(worklogDate.value, worklogInput.value, this.key);
     worklogDate.value = "";
