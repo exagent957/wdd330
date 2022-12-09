@@ -102,12 +102,19 @@ export function renderWorklogs(list, element, worklogs) {
     }
     if (buttonSave) {
       buttonSave.addEventListener("click", () => {
+        let elementDate = li.childNodes[1];
+        let updatedDate = li.childNodes[1].innerText;
+        console.log({ elementDate });
+        elementDate = handleUpdatedDate(elementDate);
+        console.log({ elementDate });
+        if (elementDate.className === "invalid") {
+          return;
+        }
+        let updatedContent = li.childNodes[2].innerText;
         buttonEdit.style.display = "inline-block";
         buttonSave.style.display = "none";
         li.childNodes[1].setAttribute("contenteditable", "false");
         li.childNodes[2].setAttribute("contenteditable", "false");
-        let updatedDate = li.childNodes[1].innerText;
-        let updatedContent = li.childNodes[2].innerText;
         worklogs.updateWorklog(worklog.id, updatedDate, updatedContent);
       });
     }

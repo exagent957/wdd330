@@ -133,6 +133,10 @@ class Worklogs {
   }
   updateWorklog(id, updatedDate, updatedContent) {
     console.log(`${id} ${updatedDate} ${updatedContent} from updateWorklog`);
+
+    if (updatedDate === "") {
+      return;
+    }
     let worklog = this.findWorklog(id);
     if (worklog) {
       this.#deleteWorklog(id, this.key);
