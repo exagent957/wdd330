@@ -36,9 +36,10 @@ class Events {
       events.forEach((event) => {
         event.date = new Date(event.date);
       });
+      const startDate = new Date(today.setDate(today.getDate()));
       const today90 = new Date(today.setDate(today.getDate() + 90));
       const eventsList = events.filter((event) => {
-        return event.date <= today90;
+        return event.date <= today90 && event.date >= startDate;
       });
       console.log(eventsList);
       eventsList.forEach((event) => {

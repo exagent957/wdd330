@@ -111,6 +111,9 @@ ul#worklogsList li {
 label {
   font-weight: 700;
 }
+li > *[contenteditable="true"] {
+  background-color: rgb(247, 244, 240);
+}
 li {
   list-style-type: none;
   line-height: 1.2em;
@@ -127,8 +130,6 @@ input {
   font-family: inherit;
   font-size: 1.5em;
   box-sizing: border-box;
-}
-input:valid {
 }
 input:invalid {
   border-color: #900;
