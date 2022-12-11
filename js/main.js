@@ -76,6 +76,10 @@ const weeklyLinks = [
     label: "Week 10 Team1 Exercise - Quakes",
     url: "team1/team01w10/quakes.html",
   },
+  {
+    label: "Final Week - JW Farm Mobile App",
+    url: "jwfarm/jwfarm.html",
+  },
 ];
 //function call
 listWeeklyItems(weeklyLinks, "weeklyList");
