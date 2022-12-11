@@ -43,12 +43,12 @@ function handleInputContent(worklogInput) {
 }
 
 let worklogDate = document.querySelector("#newWorklogDate");
-worklogDate.addEventListener("focusout", () => {
+worklogDate.addEventListener("focus", () => {
   worklogDate = handleInputDate(worklogDate);
 });
 
 let worklogInput = document.querySelector("#newWorklogInput");
-worklogInput.addEventListener("focusout", () => {
+worklogInput.addEventListener("focus", () => {
   worklogInput = handleInputContent(worklogInput);
 });
 

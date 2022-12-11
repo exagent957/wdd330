@@ -113,6 +113,8 @@ label {
 }
 li > *[contenteditable="true"] {
   background-color: rgb(247, 244, 240);
+  padding: 0.2em;
+  font-size: 1.2em;
 }
 li {
   list-style-type: none;
