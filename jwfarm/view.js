@@ -104,17 +104,13 @@ export function renderWorklogs(list, element, worklogs) {
       buttonSave.addEventListener("click", () => {
         let elementDate = li.childNodes[1];
         let updatedDate = li.childNodes[1].innerText;
-        console.log({ elementDate });
         elementDate = handleUpdatedDate(elementDate);
-        console.log({ elementDate });
         if (elementDate.className === "invalid") {
           return;
         }
         let elementContent = li.childNodes[2];
         let updatedContent = li.childNodes[2].innerText;
-        console.log({ elementContent });
         elementContent = handleUpdatedContent(elementContent);
-        console.log({ elementContent });
         if (elementContent.className === "invalid") {
           return;
         }

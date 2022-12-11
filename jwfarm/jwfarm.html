@@ -63,7 +63,7 @@
             maxlength="16"
             onfocus="inputDateOnFocus(this)"
           />
-          <span class="error" aria-live="polite"></span>
+          <span id="inputDateError" class="error" aria-live="polite"></span>
         </label>
         <label for="newWorklogInput"
           >Provide a brief description of work done. (required)
@@ -73,7 +73,7 @@
             placeholder="Create new worklog entry"
             required
           />
-          <span class="error" aria-live="polite"></span>
+          <span id="inputContentError" class="error" aria-live="polite"></span>
         </label>
         <button type="button" id="addNewWorklog" type="submit">
           Add entry to Worklog List

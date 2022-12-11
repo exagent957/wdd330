@@ -118,12 +118,13 @@ class Worklogs {
     return worklog;
   }
   newWorklog() {
-    const worklogDate = document.querySelector("#newWorklogDate");
-    const worklogInput = document.querySelector("#newWorklogInput");
+    let worklogDate = document.querySelector("#newWorklogDate");
+    let worklogInput = document.querySelector("#newWorklogInput");
+    worklogDate = handleInputDate(worklogDate);
+    worklogInput = handleInputContent(worklogInput);
     if (
       worklogDate.className === "invalid" ||
-      worklogDate.value === "" ||
-      worklogInput.value === ""
+      worklogInput.className === "invalid"
     ) {
       return;
     }
@@ -133,11 +134,6 @@ class Worklogs {
     this.listWorklogs();
   }
   updateWorklog(id, updatedDate, updatedContent) {
-    console.log(`${id} ${updatedDate} ${updatedContent} from updateWorklog`);
-
-    if (updatedDate === "") {
-      return;
-    }
     let worklog = this.findWorklog(id);
     if (worklog) {
       this.#deleteWorklog(id, this.key);
