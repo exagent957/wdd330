@@ -57,10 +57,11 @@ img {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  justify-items: start;
+  justify-items: center;
   align-items: center;
   background-color: rgb(222, 246, 242);
   border: 1px solid #333;
+  font-weight: 600;
   padding: 0.5em;
 }
 #weatherDiv p {
