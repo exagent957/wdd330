@@ -80,6 +80,10 @@ const weeklyLinks = [
     label: "Final Week - JW Farm Mobile App",
     url: "jwfarm/jwfarm.html",
   },
+  {
+    label: "Final Week - Video Link",
+    url: "http://somup.com/c3lIq2wai1",
+  },
 ];
 //function call
 listWeeklyItems(weeklyLinks, "weeklyList");
